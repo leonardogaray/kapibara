@@ -1,0 +1,6 @@
+{
+	"name" : "Test",
+	"jslibs" : {
+		"ui" : "openui5|1.26.8"
+	}
+}
