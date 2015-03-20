@@ -1,0 +1,10 @@
+{
+	"name" : "my-first-test",
+	"type" : "page",
+	"content" : [
+		{
+			"name" : "hello-world",
+			"type" : "text"
+		}
+	]
+}
