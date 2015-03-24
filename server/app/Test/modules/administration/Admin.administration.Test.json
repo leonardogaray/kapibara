@@ -1,0 +1,10 @@
+{
+	"name" : "my-admin-test",
+	"type" : "page",
+	"content" : [
+		{
+			"name" : "hello-world",
+			"type" : "text-admin"
+		}
+	]
+}

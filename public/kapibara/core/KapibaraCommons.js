@@ -16,12 +16,12 @@ var KapibaraCommons = new Class({
         
     }
 }).extend({
-	assert : function(expression, message){
-    	if(expression == undefined || expression == false)
-    		KapibaraCommons.log(message)
+	Assert : function(){
+    	if(arguments[0] == undefined || arguments[0] == false)
+    		KapibaraCommons.Log.apply(this,arguments);
     },
 
-    log : function(message){
-    	console.error(message);
+    Log : function(){
+    	console.error.apply(console, arguments);
     }
 });

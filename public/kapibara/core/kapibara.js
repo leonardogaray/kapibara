@@ -1,7 +1,7 @@
 var Kapibara = new Class({
     initialize: function(config){
-        KapibaraCommons.assert(config.app, "The application should be defined.");
-        KapibaraCommons.assert(config.lang, "The Server Side language should be defined.");
+        KapibaraCommons.Assert(config.app, "The application should be defined.");
+        KapibaraCommons.Assert(config.lang, "The Server Side language should be defined.");
 
         this.serverLanguage = config.lang;
 
@@ -51,26 +51,31 @@ var Kapibara = new Class({
 		    	self.numberOfLibs--;
 
 		        if(self.numberOfLibs == 0)
-		        	self.loadModules()
+		        	self.loadConfig()
 		    }
 		});
     },
 
- 	loadModules : function(){
+ 	loadConfig : function(){
+ 		var self = this;
+
  		var myRequest = new Request({
-		    url: this.getServerPath() + "?get=modules",
+		    url: this.getServerPath() + "?get=config",
 		    method: 'get',
-		    onRequest: function(){
-		    	debugger	
+		    onRequest: function(){	
 		    },
-		    onSuccess: function(responseText){
-		    	debugger
+		    onSuccess: function(config){
+		    	config = JSON.parse(config);
+		    	self.loadModules(config.modules);
 		    },
 		    onFailure: function(){
-		    	debugger
 		    }
 		});
 
 		myRequest.send();
- 	}   
+ 	},
+
+ 	loadModules : function(modules){
+ 		KapibaraModuleRepository.LoadModules(modules);
+ 	}
 });
