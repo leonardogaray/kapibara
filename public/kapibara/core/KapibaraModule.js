@@ -4,5 +4,9 @@ var KapibaraModule = new Class({
 		KapibaraCommons.Assert(typeof(module) == "object","The module has wrong type. Should be an object", this);
 
         this.config = module;
+    },
+
+    renderAt : function(target){
+    	return KapibaraComponentFactory.RenderAt(target, this.config);
     }
 })

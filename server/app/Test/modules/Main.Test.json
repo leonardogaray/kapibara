@@ -1,10 +1,31 @@
 {
-	"name" : "my-first-test",
+	"id" : "my-first-test",
 	"type" : "page",
-	"content" : [
+	"value" : [
 		{
-			"name" : "hello-world",
-			"type" : "text"
+			"id" : "hello-world",
+			"type" : "text",
+			"value" : "HELLOO!!!!!"
+		},
+		{
+			"id" : "my-form",
+			"type" : "form",
+			"value" : [
+				[
+					{
+						"id" : "name",
+						"type" : "text",
+						"value" : "My Name"
+					}
+				],
+				[
+					{
+						"id" : "second-name",
+						"type" : "text",
+						"value" : "My Second Name"
+					}
+				]
+			]
 		}
 	]
 }

@@ -11,6 +11,12 @@ Class.Singleton = new Class({
 
 });
 
+Class.Registry = new Class({
+    initialize : function(classDefinition, classOptions){
+        classDefinition.Register.AddClass(classDefinition, classOptions)
+    }
+});
+
 var KapibaraCommons = new Class({
     initialize: function(){
         
@@ -19,6 +25,10 @@ var KapibaraCommons = new Class({
 	Assert : function(){
     	if(arguments[0] == undefined || arguments[0] == false)
     		KapibaraCommons.Log.apply(this,arguments);
+    },
+
+    Default : function(val1, val2){
+    	return (val1 == undefined) ? val2 : val1;
     },
 
     Log : function(){

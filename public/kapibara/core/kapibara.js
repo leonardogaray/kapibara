@@ -3,6 +3,7 @@ var Kapibara = new Class({
         KapibaraCommons.Assert(config.app, "The application should be defined.");
         KapibaraCommons.Assert(config.lang, "The Server Side language should be defined.");
 
+        this.target = KapibaraCommons.Default(config.target, "#main");
         this.serverLanguage = config.lang;
 
         this.getConfiguration();
@@ -47,7 +48,9 @@ var Kapibara = new Class({
     	var self = this;
 
     	var myScript = Asset.javascript(library, {
-		    onLoad: function(){
+    		"data-sap-ui-libs" : "sap.ui.commons",
+    		"data-sap-ui-theme" : "sap_bluecrystal",
+		    "onLoad" : function(){
 		    	self.numberOfLibs--;
 
 		        if(self.numberOfLibs == 0)
@@ -67,6 +70,8 @@ var Kapibara = new Class({
 		    onSuccess: function(config){
 		    	config = JSON.parse(config);
 		    	self.loadModules(config.modules);
+		    	self.loadLanguages(config.i18n);
+		    	self.render();
 		    },
 		    onFailure: function(){
 		    }
@@ -77,5 +82,13 @@ var Kapibara = new Class({
 
  	loadModules : function(modules){
  		KapibaraModuleRepository.LoadModules(modules);
+ 	},
+
+	loadLanguages : function(languages){
+ 		KapibaraLocale.LoadLanguages(languages);
+ 	},
+
+ 	render : function(){
+ 		KapibaraModuleRepository.RenderAt(this.target);
  	}
 });

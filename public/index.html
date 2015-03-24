@@ -5,18 +5,27 @@
 	<title>Kapibara</title>
 
 	<script type="text/javascript" src="3rdparty/mootools/1.5.1/mootools.js"></script>
+	
+
 	<script type="text/javascript" src="kapibara/core/KapibaraCommons.js"></script>
+	<script type="text/javascript" src="kapibara/core/KapibaraLocale.js"></script>
 	<script type="text/javascript" src="kapibara/core/KapibaraComponent.js"></script>
+	<script type="text/javascript" src="kapibara/core/KapibaraComponentFactory.js"></script>
 	<script type="text/javascript" src="kapibara/core/KapibaraModule.js"></script>
 	<script type="text/javascript" src="kapibara/core/KapibaraModuleRepository.js"></script>
 	<script type="text/javascript" src="kapibara/core/Kapibara.js"></script>
 
-	<script type="text/javascript">
-		var app = new Kapibara({app : "Test", lang : "php"});
-	</script>
+	<script type="text/javascript" src="kapibara/components/ui/openui5/OpenUI5Component.js"></script>
+	<script type="text/javascript" src="kapibara/components/ui/openui5/OpenUI5PageComponent.js"></script>
+	<script type="text/javascript" src="kapibara/components/ui/openui5/OpenUI5FormComponent.js"></script>
+	<script type="text/javascript" src="kapibara/components/ui/openui5/OpenUI5TextComponent.js"></script>
+
 </head>
 <body>
-
+	<div id="main" />
 	
+	<script type="text/javascript">
+		var app = new Kapibara({app : "Test", lang : "php", target : "main"});
+	</script>
 </body>
 </html>

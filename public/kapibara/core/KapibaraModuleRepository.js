@@ -13,6 +13,10 @@ var KapibaraModuleRepository = new Class({
 
     hasModule : function(moduleId){
     	return this.modules[moduleId];
+    },
+
+    getModule : function(moduleId){
+    	return this.modules[moduleId];
     }
 
 }).extend({
@@ -48,7 +52,23 @@ var KapibaraModuleRepository = new Class({
 		return KapibaraModuleRepository.GetInstance().getModules();
 	},
 
+	GetModule : function(moduleId){
+		KapibaraCommons.Assert(moduleId,"The moduleId is missing");
+
+		return KapibaraModuleRepository.GetInstance().getModule(moduleId);
+	},
+
 	HasModule : function(moduleId){
 		return KapibaraModuleRepository.GetInstance().hasModule(moduleId);
+	},
+
+	GetMainModule : function(){
+		return KapibaraModuleRepository.GetModule("Main.Test.json");
+	},
+
+	RenderAt : function(target){
+		KapibaraCommons.Assert(target,"The target is missing");
+		
+		KapibaraModuleRepository.GetMainModule().renderAt(target);
 	}
 });
