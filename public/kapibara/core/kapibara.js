@@ -4,6 +4,7 @@ var Kapibara = new Class({
         KapibaraCommons.Assert(config.lang, "The Server Side language should be defined.");
 
         this.target = KapibaraCommons.Default(config.target, "#main");
+        this.app = config.app;
         this.serverLanguage = config.lang;
 
         this.getConfiguration();
@@ -13,21 +14,16 @@ var Kapibara = new Class({
     	var self = this;
 
     	var myRequest = new Request({
-		    url: this.getServerPath() + "?get=jslibs",
+		    url: this.getServerPath() + "?get=jslibs&app=" + this.app,
 		    method: 'get',
 		    onRequest: function(){
 		    },
 		    onSuccess: function(responseText){
 		    	var libs = JSON.parse(responseText);
-		    	self.numberOfLibs = 0;
+		    	self.numberOfLibs = libs["libs"].length;
 
-		    	for(var lib in libs){
-		    		self.numberOfLibs++;
-		    	}
+		    	self.loadLibrary(libs);
 
-		    	for(var lib in libs){
-			    	self.loadLibrary(libs[lib])
-				}
 		    },
 		    onFailure: function(){
 		    }
@@ -44,19 +40,23 @@ var Kapibara = new Class({
     	}
     },
 
-    loadLibrary : function(library){
+    loadLibrary : function(libraries){
     	var self = this;
 
-    	var myScript = Asset.javascript(library, {
-    		"data-sap-ui-libs" : "sap.ui.commons",
-    		"data-sap-ui-theme" : "sap_bluecrystal",
-		    "onLoad" : function(){
-		    	self.numberOfLibs--;
+    	if(libraries.length > 0) {
+	    	var myScript = Asset.javascript(libraries[0], {
+			    "onLoad" : function(){
+			    	self.numberOfLibs--;
 
-		        if(self.numberOfLibs == 0)
-		        	self.loadConfig()
-		    }
-		});
+			        if(self.numberOfLibs == 0)
+			        	self.loadConfig()
+			        else{
+			        	libraries.splice(0,1);
+			        	self.loadLibrary(libraries);
+			        }
+			    }
+			});
+		}
     },
 
  	loadConfig : function(){

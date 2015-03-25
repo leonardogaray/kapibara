@@ -1,0 +1,31 @@
+{
+	"packages" : [
+		{
+			"name" : "openui5",
+			"version" : "1.26.8",
+			"description" : "Open UI 5",
+			"files" : [
+				"3rdparty/openui5/1.26.8/resources/sap-ui-core.js|data-sap-ui-libs:sap.ui.commons|data-sap-ui-theme:sap_bluecrystal"
+			],
+			"dependencies" : {}
+		},{
+			"name" : "bootstrap",
+			"version" : "3.3.4",
+			"description" : "Bootstrap",
+			"files" : [
+				"3rdparty/bootstrap/3.3.4/css/bootstrap.min.css",
+				"3rdparty/bootstrap/3.3.4/js/bootstrap.min.js"
+			],
+			"dependencies" : {
+				"jquery" : "1.11.2"
+			}
+		},{
+			"name" : "jquery",
+			"version" : "1.11.2",
+			"description" : "JQuery",
+			"files" : [
+				"3rdparty/jquery/1.11.2/jquery.min.js"
+			]
+		}
+	]
+}

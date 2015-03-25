@@ -1,6 +1,6 @@
 {
 	"name" : "Test",
 	"jslibs" : {
-		"ui" : "openui5|1.26.8"
+		"ui" : "bootstrap|3.3.4"
 	}
 }
