@@ -6,8 +6,7 @@ var BootstrapPageComponent = new Class.Registry({
     type : "page",
 
     render : function(){
-    	
-    	
+    		
     }
 
 })

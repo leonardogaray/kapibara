@@ -1,4 +1,4 @@
-var Kapibara = new Class({
+var Kapibara = new Class.Kapibara({
     initialize: function(config){
         KapibaraCommons.Assert(config.app, "The application should be defined.");
         KapibaraCommons.Assert(config.lang, "The Server Side language should be defined.");
@@ -93,7 +93,7 @@ var Kapibara = new Class({
     		if(libraries[0].indexOf(".css") != -1){
     			Asset.css(
     				library, 
-    				KapibaraCommons.Merge({
+    				Object.merge({
 					    "onLoad" : function(){
 					    	libraries.splice(0,1);
 					        self.loadLibrary(libraries);
@@ -102,10 +102,9 @@ var Kapibara = new Class({
 					)
 				);
     		}else{
-    			console.log(library)
 		    	Asset.javascript(
 		    		library, 
-		    		KapibaraCommons.Merge({
+		    		Object.merge({
 					    "onLoad" : function(){
 					    	libraries.splice(0,1);
 					        self.loadLibrary(libraries);

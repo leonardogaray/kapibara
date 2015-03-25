@@ -1,4 +1,4 @@
-var KapibaraLocale = new Class({
+var KapibaraLocale = new Class.Kapibara({
     initialize: function(module){
     	
     }

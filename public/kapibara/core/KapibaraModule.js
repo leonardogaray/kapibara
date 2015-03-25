@@ -1,4 +1,4 @@
-var KapibaraModule = new Class({
+var KapibaraModule = new Class.Kapibara({
     initialize: function(module){
     	KapibaraCommons.Assert(module,"The module is missing", this);
 		KapibaraCommons.Assert(typeof(module) == "object","The module has wrong type. Should be an object", this);

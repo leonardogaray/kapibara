@@ -1,4 +1,4 @@
-var KapibaraComponentFactory = new Class({
+var KapibaraComponentFactory = new Class.Kapibara({
     
     initialize: function(config){
     }

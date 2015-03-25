@@ -1,4 +1,4 @@
-var KapibaraComponent = new Class({
+var KapibaraComponent = new Class.Kapibara({
     initialize: function(definition){
         if(definition){
             KapibaraCommons.Assert(definition,"The definition is not defined");

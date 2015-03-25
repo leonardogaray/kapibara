@@ -1,4 +1,4 @@
-var KapibaraModuleRepository = new Class({
+var KapibaraModuleRepository = new Class.Kapibara({
     initialize: function(){
         this.modules = {};
     },

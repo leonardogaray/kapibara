@@ -1,4 +1,19 @@
-Class.Singleton = new Class({
+Class.Kapibara = new Class({
+    initialize : function(classDefinition, classOptions){
+        if(classDefinition.Static){
+            for(var staticAttribue in classDefinition.Static){
+                if(typeof(classDefinition.Static[staticAttribue]) == "function")
+                    classDefinition.Static[staticAttribue]();
+                else
+                    classDefinition[staticAttribue] = classDefinition.Static[staticAttribue];
+            }
+        }
+        return new Class(classDefinition, classOptions);
+        
+    }
+});
+
+Class.Singleton = new Class.Kapibara({
 
 	initialize: function(classDefinition, classOptions){
 		this.singletonClass = new Class(classDefinition);
@@ -11,13 +26,13 @@ Class.Singleton = new Class({
 
 });
 
-Class.Registry = new Class({
+Class.Registry = new Class.Kapibara({
     initialize : function(classDefinition, classOptions){
         classDefinition.Register.AddClass(classDefinition, classOptions)
     }
 });
 
-var KapibaraCommons = new Class({
+var KapibaraCommons = new Class.Kapibara({
     initialize: function(){
         
     }
@@ -33,17 +48,13 @@ var KapibaraCommons = new Class({
 
     Log : function(){
     	console.error.apply(console, arguments);
-    },
-
-    Merge : function(){
-        var object = {};
-        for (var arg = 0; arg < arguments.length; arg++) {
-            var json = arguments[arg];
-            if (json)
-                for (var p in json)
-                    object[p] = json[p];
-        }
-        
-        return object;
     }
 });
+
+
+String.prototype.format = function() {
+    var args = arguments;
+    return this.replace(/{(\d+)}/g, function(match, number) { 
+        return typeof args[number] != 'undefined' ? args[number] : match;
+    });
+};
