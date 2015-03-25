@@ -1,10 +1,10 @@
-var BootstrapComponent = new Class.Registry({
+var BootstrapComponent = new Class.Kapibara({
 	Extends : KapibaraComponent,
 	
 	group : "bootstrap",
 
 	renderAt : function(target){
-    	this.render().placeAt(target);
+    	$(target)[0].appendHTML(this.render());
     }
 
 })

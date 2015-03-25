@@ -14,6 +14,7 @@ var KapibaraSnippet = new Class.Kapibara({
 
     	var myRequest = new Request({
 		    url: this.filePath,
+		    async : false,
 		    method: 'get',
 		    onRequest: function(){
 		    },
@@ -29,7 +30,7 @@ var KapibaraSnippet = new Class.Kapibara({
     },
 
     getText : function(){
-    	return this.fileContent.format.apply(this,arguments);
+    	return this.fileContent.format.apply(this.fileContent,arguments);
     }
 
 })

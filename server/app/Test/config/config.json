@@ -1,6 +1,0 @@
-{
-	"name" : "Test",
-	"jslibs" : {
-		"ui" : "bootstrap|3.3.4"
-	}
-}

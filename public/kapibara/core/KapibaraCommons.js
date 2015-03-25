@@ -2,10 +2,11 @@ Class.Kapibara = new Class({
     initialize : function(classDefinition, classOptions){
         if(classDefinition.Static){
             for(var staticAttribue in classDefinition.Static){
-                if(typeof(classDefinition.Static[staticAttribue]) == "function")
+                if(typeof(classDefinition.Static[staticAttribue]) == "function"){
                     classDefinition.Static[staticAttribue]();
-                else
+                }else{
                     classDefinition[staticAttribue] = classDefinition.Static[staticAttribue];
+                }
             }
         }
         return new Class(classDefinition, classOptions);
