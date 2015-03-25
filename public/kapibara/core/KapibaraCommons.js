@@ -33,5 +33,17 @@ var KapibaraCommons = new Class({
 
     Log : function(){
     	console.error.apply(console, arguments);
+    },
+
+    Merge : function(){
+        var object = {};
+        for (var arg = 0; arg < arguments.length; arg++) {
+            var json = arguments[arg];
+            if (json)
+                for (var p in json)
+                    object[p] = json[p];
+        }
+        
+        return object;
     }
 });

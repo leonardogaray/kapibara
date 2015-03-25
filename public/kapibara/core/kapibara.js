@@ -14,16 +14,14 @@ var Kapibara = new Class({
     	var self = this;
 
     	var myRequest = new Request({
-		    url: this.getServerPath() + "?get=jslibs&app=" + this.app,
+		    url: this.getServerPath() + "?app=" + this.app,
 		    method: 'get',
 		    onRequest: function(){
 		    },
 		    onSuccess: function(responseText){
-		    	var libs = JSON.parse(responseText);
-		    	self.numberOfLibs = libs["libs"].length;
-
-		    	self.loadLibrary(libs);
-
+		    	var configuration = JSON.parse(responseText);
+		    	
+		    	self.processConfiguration(configuration);
 		    },
 		    onFailure: function(){
 		    }
@@ -40,52 +38,95 @@ var Kapibara = new Class({
     	}
     },
 
+    processConfiguration : function(configuration){
+    	KapibaraCommons.Assert(configuration, "The configuration should be defined.");
+    	KapibaraCommons.Assert(configuration.package, "The configuration.package is missing.");
+    	KapibaraCommons.Assert(configuration.packages, "The configuration.packages is missing.");
+    	KapibaraCommons.Assert(configuration.files, "The configuration.files is missing.");
+
+    	this.configuration = configuration;
+
+    	this.processPackage();
+    	this.loadModules();
+    	this.loadLanguages();
+    	
+    },
+
+    processPackage : function(){
+    	this.libraries = [];
+
+    	for(var group in this.configuration.package.config){
+    		this.processPackageGroup(this.configuration.package.config[group]);
+    	}
+
+    	this.loadLibrary(this.libraries);
+    },
+
+    processPackageGroup : function(packageGroupName){
+    	this.configuration.packages.forEach(function(package){
+    		if(package.name == packageGroupName){
+    			for(var dependency in package.dependencies){
+    				this.processPackageGroup(dependency);
+    			}
+
+    			package.files.forEach(function(file){
+    				this.libraries.push(file)
+    			}, this);
+    		}
+    	}, this);
+    },
+
     loadLibrary : function(libraries){
     	var self = this;
 
     	if(libraries.length > 0) {
-	    	var myScript = Asset.javascript(libraries[0], {
-			    "onLoad" : function(){
-			    	self.numberOfLibs--;
+    		var options = {};
+    		var library = "";
 
-			        if(self.numberOfLibs == 0)
-			        	self.loadConfig()
-			        else{
-			        	libraries.splice(0,1);
-			        	self.loadLibrary(libraries);
-			        }
-			    }
-			});
+    		libraries[0].split("|").forEach(function(opt,index){
+    			if(index > 0)
+    				options[opt.split(":")[0]] = opt.split(":")[1];
+    			else
+    				library = opt;
+    		});
+
+    		if(libraries[0].indexOf(".css") != -1){
+    			Asset.css(
+    				library, 
+    				KapibaraCommons.Merge({
+					    "onLoad" : function(){
+					    	libraries.splice(0,1);
+					        self.loadLibrary(libraries);
+					    }},
+					    options
+					)
+				);
+    		}else{
+    			console.log(library)
+		    	Asset.javascript(
+		    		library, 
+		    		KapibaraCommons.Merge({
+					    "onLoad" : function(){
+					    	libraries.splice(0,1);
+					        self.loadLibrary(libraries);
+					    }},
+					    options
+					)
+				);
+			}
+		}else{
+			this.render();
 		}
+
+		
     },
 
- 	loadConfig : function(){
- 		var self = this;
-
- 		var myRequest = new Request({
-		    url: this.getServerPath() + "?get=config",
-		    method: 'get',
-		    onRequest: function(){	
-		    },
-		    onSuccess: function(config){
-		    	config = JSON.parse(config);
-		    	self.loadModules(config.modules);
-		    	self.loadLanguages(config.i18n);
-		    	self.render();
-		    },
-		    onFailure: function(){
-		    }
-		});
-
-		myRequest.send();
- 	},
-
  	loadModules : function(modules){
- 		KapibaraModuleRepository.LoadModules(modules);
+ 		KapibaraModuleRepository.LoadModules(this.configuration.files.modules);
  	},
 
 	loadLanguages : function(languages){
- 		KapibaraLocale.LoadLanguages(languages);
+ 		KapibaraLocale.LoadLanguages(this.configuration.files.i18n);
  	},
 
  	render : function(){
