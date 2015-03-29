@@ -21,9 +21,18 @@
 				[
 					{
 						"id" : "second-name",
-						"type" : "text",
+						"type" : "text-field",
 						"value" : "My Second Name"
+					},{
+						"id" : "email",
+						"type" : "text-field",
+						"value" : "My Email"
+					},{
+						"id" : "address",
+						"type" : "text-field",
+						"value" : "Address"
 					}
+
 				]
 			]
 		}

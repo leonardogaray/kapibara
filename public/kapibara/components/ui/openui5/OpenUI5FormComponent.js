@@ -60,32 +60,37 @@ var OpenUI5FormComponent = new Class.Registry({
 		this.renderedComponents = [];
 
 		columnFieldStructure.forEach(function(fieldStructure){
-			var component = KapibaraComponentFactory.Create(fieldStructure);
-
-			this.formComponents.push(component);
 			this.renderedComponents.push(
-				new sap.ui.commons.form.FormElement({
-					label : new sap.ui.commons.Label({
-						text : KapibaraLocale.GetText(fieldStructure.name),
-						layoutData : new sap.ui.core.VariantLayoutData({
-							multipleLayoutData : [new sap.ui.commons.layout.ResponsiveFlowLayoutData({
-								weight : 1
-							}), new sap.ui.commons.form.GridElementData({
-								hCells : "3"
-							})]
-						})
-					}),
-					fields : component.render(),
-					layoutData : new sap.ui.commons.layout.ResponsiveFlowLayoutData({
-						linebreak : true,
-						margin : false
-					})
-				})
+				this.getFormElement(fieldStructure)
 			);
 
 		}, this);
 
 		return this.renderedComponents;
 	},
+
+	getFormElement : function(fieldStructure){
+		var component = KapibaraComponentFactory.Create(fieldStructure);
+		
+		this.formComponents.push(component);
+			
+		return new sap.ui.commons.form.FormElement({
+			label : new sap.ui.commons.Label({
+				text : KapibaraLocale.GetText(fieldStructure.name),
+				layoutData : new sap.ui.core.VariantLayoutData({
+					multipleLayoutData : [new sap.ui.commons.layout.ResponsiveFlowLayoutData({
+						weight : 1
+					}), new sap.ui.commons.form.GridElementData({
+						hCells : "3"
+					})]
+				})
+			}),
+			fields : component.render(),
+			layoutData : new sap.ui.commons.layout.ResponsiveFlowLayoutData({
+				linebreak : true,
+				margin : false
+			})
+		})
+	}
 
 })

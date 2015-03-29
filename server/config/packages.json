@@ -9,6 +9,7 @@
 				"kapibara/components/ui/openui5/OpenUI5FormComponent.js",
 				"kapibara/components/ui/openui5/OpenUI5PageComponent.js",
 				"kapibara/components/ui/openui5/OpenUI5TextComponent.js",
+				"kapibara/components/ui/openui5/OpenUI5TextFieldComponent.js",
 				"3rdparty/openui5/1.26.8/resources/sap-ui-core.js|data-sap-ui-libs:sap.ui.commons|data-sap-ui-theme:sap_bluecrystal"
 			],
 			"dependencies" : {}
@@ -21,6 +22,7 @@
 				"kapibara/components/ui/bootstrap/BootstrapFormComponent.js",
 				"kapibara/components/ui/bootstrap/BootstrapPageComponent.js",
 				"kapibara/components/ui/bootstrap/BootstrapTextComponent.js",
+				"kapibara/components/ui/bootstrap/BootstrapTextFieldComponent.js",
 				"3rdparty/bootstrap/3.3.4/css/bootstrap.min.css",
 				"3rdparty/bootstrap/3.3.4/js/bootstrap.min.js"
 			],

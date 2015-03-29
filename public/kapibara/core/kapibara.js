@@ -56,7 +56,9 @@ var Kapibara = new Class.Kapibara({
     	this.libraries = [];
 
     	for(var group in this.configuration.package.config){
-    		this.processPackageGroup(this.configuration.package.config[group]);
+            var group = (KapibaraCommons.GetUrlParameters()[group] != "") ? KapibaraCommons.GetUrlParameters()[group] : this.configuration.package.config[group];
+
+    		this.processPackageGroup(group);
     	}
 
     	this.loadLibrary(this.libraries);
@@ -79,10 +81,13 @@ var Kapibara = new Class.Kapibara({
     loadLibrary : function(libraries){
     	var self = this;
 
+        //If there is any library to load ...
     	if(libraries.length > 0) {
     		var options = {};
     		var library = "";
 
+            //Some libraries need to have extra attributes in the script tag
+            //Split those options with | character, and then with :
     		libraries[0].split("|").forEach(function(opt,index){
     			if(index > 0)
     				options[opt.split(":")[0]] = opt.split(":")[1];

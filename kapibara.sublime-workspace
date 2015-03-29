@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"getForm",
+				"getFormElement"
+			],
+			[
+				"app",
+				"application"
+			],
+			[
+				"getApp",
+				"getApplicationPath"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"lib",
+				"libName"
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
 				"ad_cam",
 				"ad_campaign_overall_page_campaign"
 			],
@@ -136,42 +160,55 @@
 	"buffers":
 	[
 		{
-			"file": "server/config/paths.json",
-			"settings":
-			{
-				"buffer_size": 165,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "server/app/Test/config/config.json",
-			"settings":
-			{
-				"buffer_size": 64,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "server/languages/php/5.5.9/KapibaraIntrepeter.php",
-			"settings":
-			{
-				"buffer_size": 1441,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "public/kapibara/core/Kapibara.js",
 			"settings":
 			{
-				"buffer_size": 2274,
+				"buffer_size": 3792,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "public/kapibara/components/ui/openui5/OpenUI5TextFieldComponent.js",
+			"settings":
+			{
+				"buffer_size": 483,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "public/kapibara/components/ui/openui5/OpenUI5FormComponent.js",
+			"settings":
+			{
+				"buffer_size": 2241,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "public/kapibara/core/KapibaraComponentFactory.js",
+			"settings":
+			{
+				"buffer_size": 1270,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "public/kapibara/core/KapibaraCommons.js",
+			"settings":
+			{
+				"buffer_size": 2029,
 				"line_ending": "Windows"
 			}
 		}
 	],
 	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
 	"command_palette":
 	{
 		"height": 242.0,
+		"last_filter": "",
 		"selected_items":
 		[
 			[
@@ -246,51 +283,58 @@
 	[
 		"/C/personal-git/kapibara",
 		"/C/personal-git/kapibara/public",
-		"/C/personal-git/kapibara/public/3rdparty/bootstrap",
-		"/C/personal-git/kapibara/public/3rdparty/bootstrap/3.3.4",
-		"/C/personal-git/kapibara/public/3rdparty/bootstrap/3.3.4/js",
-		"/C/personal-git/kapibara/public/3rdparty/jqueryui",
-		"/C/personal-git/kapibara/public/3rdparty/mootools/1.5.1",
-		"/C/personal-git/kapibara/public/3rdparty/openui5",
 		"/C/personal-git/kapibara/public/kapibara",
-		"/C/personal-git/kapibara/public/kapibara/components/ui/bootstrap",
-		"/C/personal-git/kapibara/public/kapibara/components/ui/jqueryui",
+		"/C/personal-git/kapibara/public/kapibara/components",
+		"/C/personal-git/kapibara/public/kapibara/components/ui",
 		"/C/personal-git/kapibara/public/kapibara/components/ui/openui5",
-		"/C/personal-git/kapibara/public/kapibara/core",
 		"/C/personal-git/kapibara/server",
 		"/C/personal-git/kapibara/server/app",
 		"/C/personal-git/kapibara/server/app/Test",
-		"/C/personal-git/kapibara/server/app/Test/config",
-		"/C/personal-git/kapibara/server/app/Test/modules/administration",
-		"/C/personal-git/kapibara/server/config",
-		"/C/personal-git/kapibara/server/languages",
-		"/C/personal-git/kapibara/server/languages/php",
-		"/C/personal-git/kapibara/server/languages/php/5.5.9"
+		"/C/personal-git/kapibara/server/app/Test/i18n",
+		"/C/personal-git/kapibara/server/app/Test/modules",
+		"/C/personal-git/kapibara/server/config"
 	],
 	"file_history":
 	[
-		"/C/personal-git/kapibara/server/app/Test/modules/Main.Test.json",
-		"/C/personal-git/kapibara/public/kapibara/components/ui/openui5/OpenUI5PageComponent.js",
+		"/C/personal-git/kapibara/public/kapibara/components/ui/bootstrap/BootstrapTextFieldComponent.js",
 		"/C/personal-git/kapibara/public/kapibara/components/ui/bootstrap/BootstrapPageComponent.js",
-		"/C/personal-git/kapibara/public/kapibara/core/KapibaraComponent.js",
+		"/C/personal-git/kapibara/public/kapibara/components/ui/bootstrap/BootstrapTextComponent.js",
+		"/C/personal-git/kapibara/server/app/Test/modules/Main.Test.json",
+		"/C/personal-git/kapibara/public/kapibara/components/ui/bootstrap/BootstrapFormComponent.js",
+		"/C/personal-git/kapibara/public/kapibara/components/ui/bootstrap/snippets/text-field.html",
+		"/C/personal-git/kapibara/server/app/Test/i18n/i18n.en.properties",
+		"/C/personal-git/kapibara/server/config/packages.json",
+		"/C/personal-git/kapibara/public/kapibara/components/ui/openui5/OpenUI5FormComponent.js",
+		"/C/personal-git/kapibara/server/app/Test/config/package.json",
+		"/C/personal-git/kapibara/public/kapibara/components/ui/bootstrap/snippets/text.html",
+		"/C/personal-git/kapibara/public/kapibara/components/ui/bootstrap/snippets/form/form.html",
+		"/C/personal-git/kapibara/public/kapibara/components/ui/bootstrap/snippets/form/form-element.html",
+		"/C/personal-git/kapibara/public/kapibara/components/ui/openui5/OpenUI5Component.js",
+		"/C/personal-git/kapibara/public/kapibara/core/Kapibara.js",
+		"/C/personal-git/kapibara/public/kapibara/core/KapibaraModuleRepository.js",
+		"/C/personal-git/kapibara/public/kapibara/core/KapibaraModule.js",
 		"/C/personal-git/kapibara/public/kapibara/core/KapibaraComponentFactory.js",
 		"/C/personal-git/kapibara/public/kapibara/components/ui/bootstrap/BootstrapComponent.js",
-		"/C/personal-git/kapibara/public/kapibara/core/KapibaraLocale.js",
-		"/C/personal-git/kapibara/public/kapibara/core/Kapibara.js",
-		"/C/personal-git/kapibara/server/app/Test/i18n/i18n.en.properties",
-		"/C/personal-git/kapibara/public/kapibara/components/ui/openui5/OpenUI5FormComponent.js",
 		"/C/personal-git/kapibara/public/index.html",
-		"/C/personal-git/kapibara/public/kapibara/components/ui/openui5/OpenUI5TextComponent.js",
-		"/C/personal-git/kapibara/public/kapibara/components/ui/openui5/OpenUI5Component.js",
-		"/C/personal-git/kapibara/public/kapibara/components/ui/jqueryui/JQueryUIComponent.js",
-		"/C/personal-git/kapibara/public/kapibara/core/KapibaraModule.js",
-		"/C/personal-git/kapibara/public/kapibara/components/ui/jqueryui/JQueryUIPageComponent.js",
-		"/C/personal-git/kapibara/public/kapibara/core/KapibaraModuleRepository.js",
+		"/C/personal-git/kapibara/public/kapibara/core/KapibaraSnippet.js",
 		"/C/personal-git/kapibara/public/kapibara/core/KapibaraCommons.js",
-		"/C/personal-git/kapibara/server/app/Test/models/User.Test.json",
-		"/C/personal-git/kapibara/server/languages/php/5.5.9/KapibaraIntrepeter.php",
-		"/C/personal-git/kapibara/server/app/Test/config/config.json",
+		"/C/personal-git/kapibara/public/kapibara/components/ui/bootstrap/snippets/page.html",
+		"/C/personal-git/kapibara/public/kapibara/components/ui/bootstrap/snippets/panel.html",
+		"/C/personal-git/kapibara/public/kapibara/core/KapibaraComponent.js",
+		"/C/personal-git/kapibara/public/kapibara/core/KapibaraLocale.js",
 		"/C/personal-git/kapibara/server/config/paths.json",
+		"/C/personal-git/kapibara/server/app/Test/config/config.json",
+		"/C/personal-git/kapibara/server/languages/php/5.5.9/KapibaraIntrepeter.php",
+		"/C/personal-git/kapibara/server/languages/php/5.5.9/KapibaraPackageReader.php",
+		"/C/Users/leogaray/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/leogaray/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/leogaray/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/personal-git/kapibara/public/3rdparty/jquery/1.11.2/jquery.min.js",
+		"/C/personal-git/kapibara/public/kapibara/components/ui/openui5/OpenUI5PageComponent.js",
+		"/C/personal-git/kapibara/public/kapibara/components/ui/openui5/OpenUI5TextComponent.js",
+		"/C/personal-git/kapibara/public/kapibara/components/ui/jqueryui/JQueryUIComponent.js",
+		"/C/personal-git/kapibara/public/kapibara/components/ui/jqueryui/JQueryUIPageComponent.js",
+		"/C/personal-git/kapibara/server/app/Test/models/User.Test.json",
 		"/C/personal-git/kapibara/server/app/Test/modules/administration/Admin.administration.Test.json",
 		"/C/personal-git/kapibara/server/app/Test/modules/Main2.Test.json",
 		"/C/personal-git/kapibara/public/3rdparty/mootools/1.5.1/mootools.js",
@@ -379,24 +423,7 @@
 		"/C/glooobal-git/git/interpolls/new/public2/libs/form-manager/Components/ColumnChartComponent.js",
 		"/C/glooobal-git/git/interpolls/new/public2/libs/form-manager/Components/ChartComponent.js",
 		"/C/glooobal-git/git/interpolls/new/public2/css/custom.css",
-		"/C/glooobal-git/git/interpolls/new/public2/libs/form-manager/Components/FlowComponent.js",
-		"/C/glooobal-git/git/interpolls/new/public2/libs/form-manager/Authorization.js",
-		"/C/glooobal-git/git/interpolls/new/public2/user-manager/Manifests/RoleManifest.js",
-		"/C/glooobal-git/git/interpolls/new/public/libs/form-manager/Component.js",
-		"/C/glooobal-git/git/interpolls/new/public2/libs/form-manager/Components/LinkComponent.js",
-		"/C/glooobal-git/git/interpolls/new/public2/administration/main.view.js",
-		"/C/glooobal-git/git/interpolls/new/public2/campaign-manager/main.view.js",
-		"/C/glooobal-git/git/interpolls/new/public2/libs/form-manager/ManifestRepository.js",
-		"/C/glooobal-git/git/interpolls/new/public2/dashboard-manager/main.view.js",
-		"/C/glooobal-git/git/interpolls/new/serverXS/actions/jsonModels.xsjs",
-		"/C/glooobal-git/git/interpolls/new/public/campaign-manager/Manifests/AdFormatManifest.js",
-		"/C/glooobal-git/git/interpolls/new/public2/launchpad/css/launchpad.css",
-		"/C/glooobal-git/git/interpolls/new/public2/launchpad/images/campaign_manager_icon.png",
-		"/C/glooobal-git/git/interpolls/new/public2/libs/form-manager/Components/TagCloudComponent.js",
-		"/C/glooobal-git/git/interpolls/new/public2/libs/form-manager/Components/TreeComponent.js",
-		"/C/glooobal-git/git/interpolls/new/serverNode/public/js/api/api.js",
-		"/C/glooobal-git/git/interpolls/new/public2/libs/form-manager/Components/PieChartComponent.js",
-		"/C/glooobal-git/git/interpolls/new/public2/dashboard-manager/Manifests/DashboardSentimentAnalysisManifest.js"
+		"/C/glooobal-git/git/interpolls/new/public2/libs/form-manager/Components/FlowComponent.js"
 	],
 	"find":
 	{
@@ -407,6 +434,8 @@
 		"height": 90.0,
 		"where_history":
 		[
+			"C:\\personal-git\\kapibara\\public\\kapibara\\core",
+			"C:\\personal-git\\kapibara",
 			"C:\\personal-git\\kapibara\\public\\kapibara",
 			"C:\\glooobal-git\\git\\interpolls\\new\\public2",
 			"C:\\glooobal-git\\git\\interpolls\\new\\serverXS",
@@ -436,6 +465,35 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"addclass",
+			".set(\"html",
+			".set(",
+			"new",
+			"group",
+			"Create",
+			"loadModules",
+			"fact",
+			"openui",
+			"packages",
+			"packa",
+			"loadModules",
+			"getRequiredLibs",
+			"packages_path",
+			"package_app_path",
+			"app_path",
+			"APP_PATH",
+			"PACKAGE_APP_PATH",
+			"APP_PATH",
+			"PACKAGES_PATH",
+			"BASE_PATH",
+			"base_path",
+			"BASE_PATH",
+			"base_path",
+			"lowe",
+			"getRequiredFiles",
+			"readApplicationFiles",
+			"new KapibaraComponentFactory",
+			"KapibaraComponentFactory",
 			"getDefinition",
 			"ass",
 			"moduel",
@@ -534,36 +592,7 @@
 			"campaignKeywords",
 			"getCampaignKeywords",
 			"campaignKeywords",
-			"campaign",
-			"series",
-			"sendLogout",
-			"getServiceURL",
-			"getLoadingIcon",
-			"CreateInstance",
-			"getLoadingIcon",
-			"image",
-			"log",
-			"delivered_impressions",
-			"getLinkFormat",
-			"columnStructure.value.r",
-			"link",
-			"convertDataValues",
-			"setComponentValue",
-			"load",
-			"dooncha",
-			"disa",
-			"place",
-			"ZoomToTheme",
-			"ad_campai",
-			"getparam",
-			"location",
-			"placements",
-			"edit-button",
-			"edit",
-			"csv",
-			"width",
-			"edit-button",
-			"edit"
+			"campaign"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -672,86 +701,29 @@
 			[
 				{
 					"buffer": 0,
-					"file": "server/config/paths.json",
+					"file": "public/kapibara/core/Kapibara.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 165,
+						"buffer_size": 3792,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								163,
-								163
+								1986,
+								1986
 							]
 						],
 						"settings":
 						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content"
-							],
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 553.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -759,83 +731,27 @@
 				},
 				{
 					"buffer": 1,
-					"file": "server/app/Test/config/config.json",
+					"file": "public/kapibara/components/ui/openui5/OpenUI5TextFieldComponent.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 64,
+						"buffer_size": 483,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								155,
+								155
 							]
 						],
 						"settings":
 						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content"
-							],
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -846,19 +762,19 @@
 				},
 				{
 					"buffer": 2,
-					"file": "server/languages/php/5.5.9/KapibaraIntrepeter.php",
+					"file": "public/kapibara/components/ui/openui5/OpenUI5FormComponent.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1441,
+						"buffer_size": 2241,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								296,
-								296
+								1386,
+								1386
 							]
 						],
 						"settings":
@@ -871,11 +787,6 @@
 								"bh_tag_open",
 								"bh_tag_close",
 								"bh_tag_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
@@ -891,6 +802,11 @@
 								"bh_curly_open",
 								"bh_curly_close",
 								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
@@ -906,27 +822,27 @@
 								"bh_single_quote_open",
 								"bh_single_quote_close",
 								"bh_single_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content"
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
 							],
-							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 381.0,
-						"translation.y": -0.0,
+						"translation.x": -0.0,
+						"translation.y": 720.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -934,86 +850,59 @@
 				},
 				{
 					"buffer": 3,
-					"file": "public/kapibara/core/Kapibara.js",
+					"file": "public/kapibara/core/KapibaraComponentFactory.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2274,
+						"buffer_size": 1270,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								579,
-								579
+								137,
+								141
 							]
 						],
 						"settings":
 						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content"
-							],
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 132.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "public/kapibara/core/KapibaraCommons.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2029,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1810,
+								1810
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 405.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
@@ -1061,6 +950,7 @@
 	{
 		"height": 0.0
 	},
+	"pinned_build_system": "",
 	"project": "kapibara.sublime-project",
 	"replace":
 	{
@@ -1070,6 +960,7 @@
 	"select_file":
 	{
 		"height": 0.0,
+		"last_filter": "",
 		"selected_items":
 		[
 			[
@@ -1110,6 +1001,7 @@
 	"select_project":
 	{
 		"height": 0.0,
+		"last_filter": "",
 		"selected_items":
 		[
 		],
@@ -1118,6 +1010,7 @@
 	"select_symbol":
 	{
 		"height": 392.0,
+		"last_filter": "",
 		"selected_items":
 		[
 			[

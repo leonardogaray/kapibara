@@ -49,6 +49,19 @@ var KapibaraCommons = new Class.Kapibara({
 
     Log : function(){
     	console.error.apply(console, arguments);
+    },
+
+    GetUrlParameters : function(){
+        var url = window.location.search.substring(1).split("+").join(" ");
+        var params = {};
+        var tokens;
+        var regex = /[?&]?([^=]+)=([^&]*)/g;
+
+        while (tokens = regex.exec(url)) {
+            params[decodeURIComponent(tokens[1])] = decodeURIComponent(tokens[2]);
+        }
+
+        return params;
     }
 });
 

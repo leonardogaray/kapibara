@@ -7,13 +7,6 @@ var KapibaraComponentFactory = new Class.Kapibara({
 	RegisteredClasses : {},
 
 	AddClass : function(classDefinition, classOptions){
-        /*
-        var helper = new (new Class(classDefinition, classOptions))();
-        
-        if(!KapibaraComponentFactory.RegisteredClasses[helper.group])
-            KapibaraComponentFactory.RegisteredClasses[helper.group] = {};
-        */
-
 		KapibaraComponentFactory.RegisteredClasses[classDefinition.type] = [classDefinition, classOptions];
 	},
 
