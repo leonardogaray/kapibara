@@ -18,9 +18,9 @@ var JQueryMobilePageComponent = new Class.Registry({
     	this.getValue().forEach(function(rowStructure){
     		var component = KapibaraComponentFactory.Create(rowStructure);
 
-    		html += JQueryMobilePageComponent.PageSnippet.getText(KapibaraLocale.GetText(component.name), component.render());
+    		html += JQueryMobilePageComponent.PanelSnippet.getText(KapibaraLocale.GetText(component.name), component.render());
     	})
 
-    	return html;
+    	return JQueryMobilePageComponent.PageSnippet.getText(html);
     }
 })

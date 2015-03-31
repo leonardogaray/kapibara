@@ -5,9 +5,14 @@ var JQueryMobileComponent = new Class.Kapibara({
 
 	renderAt : function(target){
 		var self = this;
-		$( document ).on( "pagebeforecreate", function() {
-			$(target).replaceWith( self.render() ).enhanceWithin();
-		});
+		
+		setTimeout(function(){
+			debugger
+			$(target).replaceWith( self.render() );
+			$(target).enhanceWithin();
+		},2000)
+
+		
 
     }
 
