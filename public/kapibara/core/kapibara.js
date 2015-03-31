@@ -3,11 +3,15 @@ var Kapibara = new Class.Kapibara({
         KapibaraCommons.Assert(config.app, "The application should be defined.");
         KapibaraCommons.Assert(config.lang, "The Server Side language should be defined.");
 
+        var self = this;
+
         this.target = KapibaraCommons.Default(config.target, "#main");
         this.app = config.app;
         this.serverLanguage = config.lang;
 
-        this.getConfiguration();
+        window.addEvent('domready', function() {
+            self.getConfiguration();
+        });
     },
 
     getConfiguration : function(){

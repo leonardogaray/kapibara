@@ -1,6 +1,14 @@
 {
 	"packages" : [
 		{
+			"name" : "kapibara",
+			"version" : "0.0.1",
+			"description" : "Kapibara Components",
+			"files" : [
+				"kapibara/components/ui/kapibara/KapibaraTableComponent.js"
+			],
+			"dependencies" : {}
+		},{
 			"name" : "openui5",
 			"version" : "1.26.8",
 			"description" : "Open UI 5",
@@ -10,9 +18,13 @@
 				"kapibara/components/ui/openui5/OpenUI5PageComponent.js",
 				"kapibara/components/ui/openui5/OpenUI5TextComponent.js",
 				"kapibara/components/ui/openui5/OpenUI5TextFieldComponent.js",
-				"3rdparty/openui5/1.26.8/resources/sap-ui-core.js|data-sap-ui-libs:sap.ui.commons|data-sap-ui-theme:sap_bluecrystal"
+				"kapibara/components/ui/openui5/OpenUI5TableComponent.js",
+				"kapibara/components/ui/openui5/OpenUI5ImageComponent.js",
+				"3rdparty/openui5/1.26.8/resources/sap-ui-core.js|data-sap-ui-libs:sap.ui.commons,sap.ui.table|data-sap-ui-theme:sap_bluecrystal"
 			],
-			"dependencies" : {}
+			"dependencies" : {
+				"kapibara" : "0.0.1"
+			}
 		},{
 			"name" : "bootstrap",
 			"version" : "3.3.4",
@@ -23,10 +35,13 @@
 				"kapibara/components/ui/bootstrap/BootstrapPageComponent.js",
 				"kapibara/components/ui/bootstrap/BootstrapTextComponent.js",
 				"kapibara/components/ui/bootstrap/BootstrapTextFieldComponent.js",
+				"kapibara/components/ui/bootstrap/BootstrapTableComponent.js",
+				"kapibara/components/ui/bootstrap/BootstrapImageComponent.js",
 				"3rdparty/bootstrap/3.3.4/css/bootstrap.min.css",
 				"3rdparty/bootstrap/3.3.4/js/bootstrap.min.js"
 			],
 			"dependencies" : {
+				"kapibara" : "0.0.1",
 				"jquery" : "1.11.2"
 			}
 		},{
@@ -36,6 +51,25 @@
 			"files" : [
 				"3rdparty/jquery/1.11.2/jquery.min.js"
 			]
+		},{
+			"name" : "jquerymobile",
+			"version" : "1.4.5",
+			"description" : "JQuery Mobile",
+			"files" : [
+				"3rdparty/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css",
+				"3rdparty/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js",
+				"kapibara/components/ui/jquerymobile/JQueryMobileComponent.js",
+				"kapibara/components/ui/jquerymobile/JQueryMobileTextComponent.js",
+				"kapibara/components/ui/jquerymobile/JQueryMobilePageComponent.js",
+				"kapibara/components/ui/jquerymobile/JQueryMobileFormComponent.js",
+				"kapibara/components/ui/jquerymobile/JQueryMobileTextFieldComponent.js",
+				"kapibara/components/ui/jquerymobile/JQueryMobileTableComponent.js",
+				"kapibara/components/ui/jquerymobile/JQueryMobileImageComponent.js"				
+			],
+			"dependencies" : {
+				"kapibara" : "0.0.1",
+				"jquery" : "1.11.2"
+			}
 		}
 	]
 }

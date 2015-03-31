@@ -28,7 +28,17 @@ var KapibaraComponent = new Class.Kapibara({
     	return this.definition;
     },
 
+    getOption : function(optionName){
+        if(optionName != undefined && optionName != "" && this.options && this.options[optionName])
+            return this.options[optionName];
+        return undefined
+    },
+
+    getNameText : function(optionName){
+        return KapibaraLocale.GetText(this.name ? this.name : this.getId());
+    },
+
     render : function(){
     	KapibaraCommons.Assert(false,"The render method should be defined in sub classes");
-    }
+    },
 })

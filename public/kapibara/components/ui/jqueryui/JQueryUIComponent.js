@@ -1,4 +1,4 @@
-var JQueryUIComponent = new Class.Registry({
+var JQueryUIComponent = new Class.Kapibara({
 	Extends : KapibaraComponent,
 	
 	group : "jqueryui",
