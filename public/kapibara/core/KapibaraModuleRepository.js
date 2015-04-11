@@ -17,7 +17,15 @@ var KapibaraModuleRepository = new Class.Kapibara({
 
     getModule : function(moduleId){
     	return this.modules[moduleId];
-    }
+    },
+
+    setMainModuleId : function(moduleId){
+    	this.mainModuleId = moduleId;
+    },
+
+    getMainModuleId : function(){
+    	return this.mainModuleId;
+    },
 
 }).extend({
 	GetInstance : function(){
@@ -33,6 +41,9 @@ var KapibaraModuleRepository = new Class.Kapibara({
 
 		for(var moduleId in modules){
 			KapibaraModuleRepository.AddModule(moduleId, modules[moduleId]);
+
+			if(moduleId.match(/Main\..*\.json$/))
+				KapibaraModuleRepository.GetInstance().setMainModuleId(moduleId);
 		}
 	},
 
@@ -63,7 +74,7 @@ var KapibaraModuleRepository = new Class.Kapibara({
 	},
 
 	GetMainModule : function(){
-		return KapibaraModuleRepository.GetModule("Main.Test.json");
+		return KapibaraModuleRepository.GetModule(KapibaraModuleRepository.GetInstance().getMainModuleId());
 	},
 
 	RenderAt : function(target){
