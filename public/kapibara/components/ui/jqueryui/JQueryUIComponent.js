@@ -3,4 +3,9 @@ var JQueryUIComponent = new Class.Kapibara({
 	
 	group : "jqueryui",
 
+	renderAt : function(target){
+		$(target).html( this.render() );
+		$('#myTable').dataTable();
+    }
+
 })

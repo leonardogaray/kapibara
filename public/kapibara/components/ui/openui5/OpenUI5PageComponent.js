@@ -12,6 +12,26 @@ var OpenUI5PageComponent = new Class.Registry({
 			width : '100%'
 		});
     	
+    	//Render the Header
+    	if(this.getOptions("header")){
+    		var oRow = new sap.ui.commons.layout.MatrixLayoutRow({});
+    		this.component.addRow(oRow);
+    		var oCell = new sap.ui.commons.layout.MatrixLayoutCell({	
+    			content : KapibaraComponentFactory.Create(this.getOption("header")).render()
+    		});
+    		oRow.addCell(oCell);
+    	}
+
+    	//Render the Menu
+    	if(this.getOptions("menu")){
+    		var oRow = new sap.ui.commons.layout.MatrixLayoutRow({});
+    		this.component.addRow(oRow);
+    		var oCell = new sap.ui.commons.layout.MatrixLayoutCell({	
+    			content : KapibaraComponentFactory.Create(this.getOption("menu")).render()
+    		});
+    		oRow.addCell(oCell);
+    	}
+
 		this.getValue().forEach(function(rowStructure){
 			var oRow = new sap.ui.commons.layout.MatrixLayoutRow({
 			});

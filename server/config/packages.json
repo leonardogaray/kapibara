@@ -20,6 +20,9 @@
 				"kapibara/components/ui/openui5/OpenUI5TextFieldComponent.js",
 				"kapibara/components/ui/openui5/OpenUI5TableComponent.js",
 				"kapibara/components/ui/openui5/OpenUI5ImageComponent.js",
+				"kapibara/components/ui/openui5/OpenUI5HeaderComponent.js",
+				"kapibara/components/ui/openui5/OpenUI5MenuComponent.js",
+				"kapibara/components/ui/openui5/OpenUI5FileFieldComponent.js",
 				"3rdparty/openui5/1.26.8/resources/sap-ui-core.js|data-sap-ui-libs:sap.ui.commons,sap.ui.table|data-sap-ui-theme:sap_bluecrystal"
 			],
 			"dependencies" : {
@@ -52,6 +55,37 @@
 				"3rdparty/jquery/1.11.2/jquery.min.js"
 			]
 		},{
+			"name" : "jqueryui-datatable",
+			"version" : "0.0.0",
+			"description" : "JQuery UI Table",
+			"files" : [
+
+				"3rdparty/jqueryui-datatable/0.0.0/jquery-datatable.min.js",
+				"3rdparty/jqueryui-datatable/0.0.0/jquery-ui-datatable.js"		
+			],
+			"dependencies" : {
+			}
+		},{
+			"name" : "jqueryui",
+			"version" : "1.10.4",
+			"description" : "JQuery UI",
+			"files" : [
+				"3rdparty/jqueryui/1.10.4/themes/smoothness/jquery-ui-1.10.4.custom.min.css",
+				"3rdparty/jqueryui/1.10.4/ui/jquery-ui.js",
+				"kapibara/components/ui/jqueryui/JQueryUIComponent.js",
+				"kapibara/components/ui/jqueryui/JQueryUITextComponent.js",
+				"kapibara/components/ui/jqueryui/JQueryUIPageComponent.js",
+				"kapibara/components/ui/jqueryui/JQueryUIFormComponent.js",
+				"kapibara/components/ui/jqueryui/JQueryUITextFieldComponent.js",
+				"kapibara/components/ui/jqueryui/JQueryUITableComponent.js",
+				"kapibara/components/ui/jqueryui/JQueryUIImageComponent.js"		
+			],
+			"dependencies" : {
+				"kapibara" : "0.0.1",
+				"jquery" : "1.11.2",
+				"jqueryui-datatable" : "0.0.0"
+			}
+ 		},{
 			"name" : "jquerymobile",
 			"version" : "1.4.5",
 			"description" : "JQuery Mobile",

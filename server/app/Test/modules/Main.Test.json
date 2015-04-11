@@ -1,6 +1,26 @@
 {
 	"id" : "my-first-test",
 	"type" : "page",
+	"options" : {
+		"header" : {
+			"id" : "header",
+			"type" : "header",
+			"value" : "My First App"
+		},
+		"menu" : {
+			"id" : "menu",
+			"type" : "menu",
+			"value" : [
+				{
+					"id" : "main",
+					"value" : "main"
+				},{
+					"id" : "second",
+					"value" : "second"
+				}
+			]
+		}
+	},
 	"value" : [
 		{
 			"id" : "hello-world",
@@ -15,6 +35,10 @@
 						"id" : "name",
 						"type" : "text",
 						"value" : "My Name"
+					},{
+						"id" : "profile-image",
+						"type" : "file-field",
+						"value" : "My Profile"
 					}
 				],
 				[
