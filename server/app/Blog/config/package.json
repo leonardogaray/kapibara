@@ -1,0 +1,12 @@
+{
+	"name" : "Blog",
+	"version" : "0.0.1",
+	"description" : "A Simple Blog",
+	"dependencies" : {
+	},
+	"config" : {
+		"ui" : "openui5",
+		"htmleditor" : "tynimce",
+		"map" : "googlemaps" 
+	}
+}

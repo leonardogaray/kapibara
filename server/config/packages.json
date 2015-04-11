@@ -23,10 +23,13 @@
 				"kapibara/components/ui/openui5/OpenUI5HeaderComponent.js",
 				"kapibara/components/ui/openui5/OpenUI5MenuComponent.js",
 				"kapibara/components/ui/openui5/OpenUI5FileFieldComponent.js",
+				"kapibara/components/ui/openui5/OpenUI5TextAreaFieldComponent.js",
+				"kapibara/components/ui/openui5/OpenUI5HTMLTextAreaFieldComponent.js",
 				"3rdparty/openui5/1.26.8/resources/sap-ui-core.js|data-sap-ui-libs:sap.ui.commons,sap.ui.table|data-sap-ui-theme:sap_bluecrystal"
 			],
 			"dependencies" : {
-				"kapibara" : "0.0.1"
+				"kapibara" : "0.0.1",
+				"tinymce" : "4.1.9"
 			}
 		},{
 			"name" : "bootstrap",
@@ -104,6 +107,22 @@
 				"kapibara" : "0.0.1",
 				"jquery" : "1.11.2"
 			}
+		},{
+			"name" : "tinymce",
+			"version" : "4.1.9",
+			"description" : "Tinymce 4.1.9",
+			"files" : [
+				"3rdparty/tinymce/4.1.9/js/tinymce/tinymce.min.js",
+				"kapibara/components/htmleditor/tinymce/TinymceWidget.js"
+			]
+		},{
+			"name" : "googlemaps",
+			"version" : "3.0.0",
+			"description" : "Google Maps 3.0.0",
+			"files" : [
+				"https://maps.googleapis.com/maps/api/js?v=3.exp",
+				"kapibara/components/maps/googlemaps/GoogleMapsWidget.js"
+			]
 		}
 	]
 }

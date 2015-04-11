@@ -1,0 +1,59 @@
+{
+	"id" : "my-first-test",
+	"type" : "page",
+	"options" : {
+		"header" : {
+			"id" : "header",
+			"type" : "header",
+			"value" : "My First Blog"
+		},
+		"menu" : {
+			"id" : "menu",
+			"type" : "menu",
+			"value" : [
+				{
+					"id" : "main",
+					"value" : "main"
+				},{
+					"id" : "second",
+					"value" : "second"
+				}
+			]
+		}
+	},
+	"value" : [
+		{
+			"id" : "my-form",
+			"type" : "form",
+			"value" : [
+				[
+					{
+						"id" : "name",
+						"type" : "text",
+						"value" : "My Name"
+					},{
+						"id" : "profile-image",
+						"type" : "file-field",
+						"value" : "My Profile"
+					}
+				],
+				[
+					{
+						"id" : "second-name",
+						"type" : "text-field",
+						"value" : "My Second Name"
+					},{
+						"id" : "email",
+						"type" : "text-field",
+						"value" : "My Email"
+					},{
+						"id" : "address",
+						"type" : "html-text-area-field",
+						"value" : "Address"
+					}
+
+				]
+			]
+		}
+	]
+}
