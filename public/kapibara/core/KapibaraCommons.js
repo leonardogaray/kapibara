@@ -39,7 +39,7 @@ var KapibaraCommons = new Class.Kapibara({
     }
 }).extend({
 	Assert : function(){
-    	if(arguments[0] === undefined || arguments[0] === false){
+    	if(arguments[0] === undefined || arguments[0] === null || arguments[0] === false){
     		KapibaraCommons.Log.apply(this,arguments);
         }
     },

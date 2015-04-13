@@ -1,6 +1,16 @@
 {
 	"id" : "my-first-test",
 	"type" : "page",
+	"events" : {
+		"articles" : {
+			"create" : {
+				"load" : "articles"
+			},
+			"click" : {
+				"load" : "article->id"
+			}
+		}		
+	},
 	"options" : {
 		"header" : {
 			"id" : "header",
@@ -23,36 +33,48 @@
 	},
 	"value" : [
 		{
-			"id" : "my-form",
+			"id" : "article",
 			"type" : "form",
 			"value" : [
 				[
 					{
-						"id" : "name",
-						"type" : "text",
-						"value" : "My Name"
+						"id" : "id",
+						"type" : "text-field",
+						"value" : "id"
 					},{
-						"id" : "profile-image",
-						"type" : "file-field",
-						"value" : "My Profile"
+						"id" : "title",
+						"type" : "text-field",
+						"value" : "title"
 					}
-				],
-				[
+				],[
 					{
-						"id" : "second-name",
+						"id" : "url",
 						"type" : "text-field",
-						"value" : "My Second Name"
+						"value" : "url"
 					},{
-						"id" : "email",
-						"type" : "text-field",
-						"value" : "My Email"
-					},{
-						"id" : "address",
-						"type" : "html-text-area-field",
-						"value" : "Address"
+						"id" : "date",
+						"type" : "date-field",
+						"value" : "date"
 					}
-
 				]
+			]
+		},{
+			"id" : "articles",
+			"type" : "table",
+			"value" : [
+				{
+					"id" : "id",
+					"value" : "id"
+				},{
+					"id" : "title",
+					"value" : "title"
+				},{
+					"id" : "url",
+					"value" : "url"
+				},{
+					"id" : "date",
+					"value" : "date"
+				}
 			]
 		}
 	]

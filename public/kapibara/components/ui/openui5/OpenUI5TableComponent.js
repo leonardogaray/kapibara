@@ -24,23 +24,30 @@ var OpenUI5TableComponent = new Class.Registry({
         //Fire selection when click any cell of the table
         this.component.setSelectionBehavior( sap.ui.table.SelectionBehavior.Row );
 
-        /*
         this.component.attachEvent("rowSelectionChange", function(oEvent) {
             var iRowIndex = oEvent.getParameter("rowIndex");
             var oRowContext = oEvent.getParameter("rowContext");
             var data = oRowContext.getObject();
-
-            //self.onChange(iRowIndex, oRowContext, data);
-
-            self.doOnClickEvent(self.getName(), data);
+            
+            self.doOnEvent("click", data);
         });
-        */
 
         return this.component;
     },
 
     getModel : function(){
         return this.model;
+    },
+
+    getComponentValue : function(){
+        return (this.model.getData().length) ? this.model.getData() : [];
+    },
+
+    setComponentValue : function(data){
+        this.getComponent().setVisibleRowCount(((data.length > 0 && data.length <= 20) ? data.length : ((data.length !== 0) ? 20 : 1)));
+        
+        this.getModel().setData(data);
+        this.getComponent().setModel(this.model);
     },
 
     "getColumn" : function(columnStructure, columnIndex){

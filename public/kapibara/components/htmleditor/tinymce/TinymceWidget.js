@@ -1,8 +1,9 @@
-var TinymceWidget = new Class.Kapibara({
-	Static : {
-    },
+var TinymceWidget = new Class.Registry({
+	Register : KapibaraWidgetFactory, 
 
-	Extends : KapibaraWidget,
+	Extends : HtmlEditorWidget,
+
+	type : "tinymce",
 
 	render : function(config){
         this.widget = tinymce.init({

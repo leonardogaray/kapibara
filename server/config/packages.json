@@ -5,7 +5,11 @@
 			"version" : "0.0.1",
 			"description" : "Kapibara Components",
 			"files" : [
-				"kapibara/components/ui/kapibara/KapibaraTableComponent.js"
+				"kapibara/components/ui/kapibara/KapibaraFormComponent.js",
+				"kapibara/components/ui/kapibara/KapibaraTableComponent.js",
+				"kapibara/components/ui/kapibara/KapibaraHtmlTextAreaFieldComponent.js",
+				"kapibara/components/htmleditor/HtmlEditorWidget.js",
+				"kapibara/components/maps/MapsWidget.js"
 			],
 			"dependencies" : {}
 		},{
@@ -18,6 +22,7 @@
 				"kapibara/components/ui/openui5/OpenUI5PageComponent.js",
 				"kapibara/components/ui/openui5/OpenUI5TextComponent.js",
 				"kapibara/components/ui/openui5/OpenUI5TextFieldComponent.js",
+				"kapibara/components/ui/openui5/OpenUI5DateFieldComponent.js",
 				"kapibara/components/ui/openui5/OpenUI5TableComponent.js",
 				"kapibara/components/ui/openui5/OpenUI5ImageComponent.js",
 				"kapibara/components/ui/openui5/OpenUI5HeaderComponent.js",
@@ -25,11 +30,11 @@
 				"kapibara/components/ui/openui5/OpenUI5FileFieldComponent.js",
 				"kapibara/components/ui/openui5/OpenUI5TextAreaFieldComponent.js",
 				"kapibara/components/ui/openui5/OpenUI5HTMLTextAreaFieldComponent.js",
+				"kapibara/components/ui/openui5/OpenUI5MapComponent.js",
 				"3rdparty/openui5/1.26.8/resources/sap-ui-core.js|data-sap-ui-libs:sap.ui.commons,sap.ui.table|data-sap-ui-theme:sap_bluecrystal"
 			],
 			"dependencies" : {
-				"kapibara" : "0.0.1",
-				"tinymce" : "4.1.9"
+				"kapibara" : "0.0.1"
 			}
 		},{
 			"name" : "bootstrap",
@@ -120,7 +125,7 @@
 			"version" : "3.0.0",
 			"description" : "Google Maps 3.0.0",
 			"files" : [
-				"https://maps.googleapis.com/maps/api/js?v=3.exp",
+				"https://maps.googleapis.com/maps/api/js?v=3.exp&callback=initializeKapibaraGoogleMap",
 				"kapibara/components/maps/googlemaps/GoogleMapsWidget.js"
 			]
 		}

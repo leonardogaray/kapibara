@@ -6,7 +6,7 @@
 	},
 	"config" : {
 		"ui" : "openui5",
-		"htmleditor" : "tynimce",
+		"htmleditor" : "tinymce",
 		"map" : "googlemaps" 
 	}
 }

@@ -57,7 +57,7 @@ var KapibaraTableComponent = new Class.Kapibara({
 	},
 
 	getDateColumn : function(columnStructure){
-		KapibaraCommons.Assert(false,"The getModel method should be defined in sub classes");
+		KapibaraCommons.Assert(false,"The getDateColumn method should be defined in sub classes");
 	},
 
 	getCurrencyColumn : function(columnStructure){

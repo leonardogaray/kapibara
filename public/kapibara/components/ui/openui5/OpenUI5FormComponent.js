@@ -2,13 +2,13 @@ var OpenUI5FormComponent = new Class.Registry({
 	Register : KapibaraComponentFactory,    
 
     Extends : OpenUI5Component,
+
+    Implements : KapibaraFormComponent,
     
     type : "form",
 
     render : function(){
     	
-    	this.formComponents = [];
-
 		this.component = new sap.ui.commons.layout.MatrixLayout({
 			layoutFixed : true,
 			width : '100%'
@@ -72,7 +72,7 @@ var OpenUI5FormComponent = new Class.Registry({
 	getFormElement : function(fieldStructure){
 		var component = KapibaraComponentFactory.Create(fieldStructure);
 		
-		this.formComponents.push(component);
+		this.addFormComponent(component);
 			
 		return new sap.ui.commons.form.FormElement({
 			label : new sap.ui.commons.Label({
@@ -91,6 +91,7 @@ var OpenUI5FormComponent = new Class.Registry({
 				margin : false
 			})
 		})
-	}
+	},
+
 
 })

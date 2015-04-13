@@ -28,8 +28,9 @@ var OpenUI5MapComponent = new Class.Registry({
     },
 
     afterRender : function(){
-        this.widget = new TinymceWidget();
-        this.widget.render({id : this.getId()});
+        this.widget = KapibaraWidgetFactory.Create({
+            type : "googlemaps"
+        });
     }
 
 })

@@ -5,5 +5,13 @@ var OpenUI5Component = new Class.Kapibara({
 
     renderAt : function(target){
     	this.render().placeAt(target.replace("#",""));
+    },
+
+    setComponentValue : function(data){
+    	this.component.setValue(data);
+    },
+
+    getComponentValue : function(){
+    	return this.component.getValue();
     }
 })

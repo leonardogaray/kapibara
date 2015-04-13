@@ -21,6 +21,8 @@ var KapibaraComponent = new Class.Kapibara({
             );
 
             this.definition = definition;
+
+            this.eventManager = new KapibaraEventManager(this);
         }
     },
 
@@ -41,4 +43,58 @@ var KapibaraComponent = new Class.Kapibara({
     render : function(){
     	KapibaraCommons.Assert(false,"The render method should be defined in sub classes");
     },
+
+    getComponent : function(){
+        return this.component;
+    },
+
+    getRequestUrlParameters : function(parameters){
+        var requestUrlParameters = "";
+        
+        for(var parameter in parameters){
+            requestUrlParameters += "/" + parameters[parameter]
+        }
+
+        return requestUrlParameters;
+    },
+
+    getRequestUrl : function(parameters){
+        return "../server/languages/php/5.3.8/core/Test.php/" + this.getId() + this.getRequestUrlParameters(parameters)
+    },
+
+    requestComponentData : function(parameters){
+        var self = this;
+
+        KapibaraRequest.Get({
+            url: this.getRequestUrl(parameters),
+            onSuccess: function(data){
+                self.setComponentValue(data);  
+            }
+        });
+    },
+
+    cleanData : function(){
+        KapibaraCommons.Assert(false,"The cleanData method should be defined in sub classes");
+    },
+
+    setComponentValue : function(){
+        KapibaraCommons.Assert(false,"The setComponentValue method should be defined in sub classes");
+    },
+
+    getComponentValue : function(){
+        KapibaraCommons.Assert(false,"The getComponentValue method should be defined in sub classes");
+    },
+
+    /************************************* EVENTS *****************************************/
+    doOnEvent : function(event, parameters){
+        this.eventManager.doOnEvent(event, parameters);
+    },
+
+    load : function(parameters){
+        this.requestComponentData(parameters);
+    },
+
+    click : function(parameters){
+        this.requestComponentData(parameters);
+    }
 })

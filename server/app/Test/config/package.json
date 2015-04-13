@@ -5,6 +5,7 @@
 	"dependencies" : {
 	},
 	"config" : {
-		"ui" : "bootstrap"
+		"ui" : "bootstrap",
+		"map" : "googlemaps"
 	}
 }

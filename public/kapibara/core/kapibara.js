@@ -17,26 +17,17 @@ var Kapibara = new Class.Kapibara({
     getConfiguration : function(){
     	var self = this;
 
-    	var myRequest = new Request({
+    	KapibaraRequest.Get({
 		    url: this.getServerPath() + "?app=" + this.app,
-		    method: 'get',
-		    onRequest: function(){
-		    },
-		    onSuccess: function(responseText){
-		    	var configuration = JSON.parse(responseText);
-		    	
+		    onSuccess: function(configuration){
 		    	self.processConfiguration(configuration);
-		    },
-		    onFailure: function(){
 		    }
 		});
-
-		myRequest.send();
     },
 
     getServerPath : function(){
     	switch(this.serverLanguage){
-    		case "php" : return "../server/languages/php/5.5.9/KapibaraIntrepeter.php"; break;
+    		case "php" : return "../server/languages/php/5.3.8/KapibaraIntrepeter.php"; break;
     		default :
     			KapibaraCommons.log("The Language should be defined.");
     	}
@@ -58,9 +49,9 @@ var Kapibara = new Class.Kapibara({
 
     processPackage : function(){
     	this.libraries = [];
-
+        
     	for(var group in this.configuration.package.config){
-            var group = (KapibaraCommons.GetUrlParameters()[group] != "") ? KapibaraCommons.GetUrlParameters()[group] : this.configuration.package.config[group];
+            var group = (KapibaraCommons.GetUrlParameters()[group] && KapibaraCommons.GetUrlParameters()[group] != "") ? KapibaraCommons.GetUrlParameters()[group] : this.configuration.package.config[group];
 
     		this.processPackageGroup(group);
     	}

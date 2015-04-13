@@ -6,6 +6,8 @@ var KapibaraComponentFactory = new Class.Kapibara({
 }).extend({
 	RegisteredClasses : {},
 
+    Components : [],
+
 	AddClass : function(classDefinition, classOptions){
 		KapibaraComponentFactory.RegisteredClasses[classDefinition.type] = [classDefinition, classOptions];
 	},
@@ -27,6 +29,10 @@ var KapibaraComponentFactory = new Class.Kapibara({
         
         var component = (new (KapibaraComponentFactory.GetClass(config.type))(config));
 
+        KapibaraComponentFactory.AddComponent(component);
+        
+        component.doOnEvent("create");
+
         return component;
     },
 
@@ -36,5 +42,29 @@ var KapibaraComponentFactory = new Class.Kapibara({
 
     RenderAt : function(target, config){
         return KapibaraComponentFactory.Create(config).renderAt(target);
-    }
+    },
+
+    AddComponent : function(component){
+        KapibaraComponentFactory.Components[component.getName()] = component;
+    },
+
+    GetComponent : function(componentId){
+        return KapibaraComponentFactory.Components[componentId];
+    },
+
+    GetComponentUI : function(componentId){
+        return KapibaraComponentFactory.GetComponent(componentId).getComponent();
+    },
+
+    HasComponent : function(componentId){
+        return KapibaraComponentFactory.Components[componentId];
+    },
+
+    CleanComponents : function(){
+        KapibaraComponentFactory.Components = {};
+    },
+
+    GetAllComponents : function(){
+        return KapibaraComponentFactory.Components;
+    },
 })

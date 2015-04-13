@@ -5,7 +5,9 @@ var OpenUI5HTMLTextAreaFieldComponent = new Class.Registry({
         }
     },
 
-	Register : KapibaraComponentFactory,    
+	Register : KapibaraComponentFactory, 
+
+    Implements : KapibaraHtmlTextAreaComponent,   
 
     Extends : OpenUI5Component,
     
@@ -28,8 +30,13 @@ var OpenUI5HTMLTextAreaFieldComponent = new Class.Registry({
     },
 
     afterRender : function(){
-        this.widget = new TinymceWidget();
-        this.widget.render({id : this.getId()});
+        this.widget = KapibaraWidgetFactory.Create({
+            type : "tinymce"
+        });
+
+        this.widget.render({
+            id : this.getId()
+        });
     }
 
 })
