@@ -11,7 +11,7 @@ var OpenUI5PageComponent = new Class.Registry({
 			layoutFixed : true,
 			width : '100%'
 		});
-    	
+    	/*
     	//Render the Header
     	if(this.getOptions("header")){
     		var oRow = new sap.ui.commons.layout.MatrixLayoutRow({});
@@ -31,6 +31,7 @@ var OpenUI5PageComponent = new Class.Registry({
     		});
     		oRow.addCell(oCell);
     	}
+        */
 
 		this.getValue().forEach(function(rowStructure){
 			var oRow = new sap.ui.commons.layout.MatrixLayoutRow({
@@ -40,13 +41,15 @@ var OpenUI5PageComponent = new Class.Registry({
 			var component = KapibaraComponentFactory.Create(rowStructure);
 
 			var oCell = new sap.ui.commons.layout.MatrixLayoutCell();
-			oCell.addContent(
+			/*
+            oCell.addContent(
 				new sap.ui.commons.Panel({
 					text : KapibaraLocale.GetText(component.name),
 					content : component.render()
 				})
 			);
-
+            */
+            oCell.addContent(component.render());
 
 			oRow.addCell(oCell);		
 		}, this);

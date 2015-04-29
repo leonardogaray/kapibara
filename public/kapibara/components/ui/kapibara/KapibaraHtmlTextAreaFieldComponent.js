@@ -1,4 +1,4 @@
-var KapibaraHtmlTextAreaComponent = new Class.Kapibara({
+var KapibaraHTMLTextAreaComponent = new Class.Kapibara({
 	
     Extends : KapibaraComponent
 

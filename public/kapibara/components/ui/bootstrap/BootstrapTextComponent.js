@@ -12,7 +12,7 @@ var BootstrapTextComponent = new Class.Registry({
     type : "text",
 
     render : function(){
-    	return BootstrapTextComponent.TextSnippet.getText(this.getValue());
+    	return BootstrapTextComponent.TextSnippet.getText();
     }
 
 })

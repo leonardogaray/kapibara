@@ -12,10 +12,10 @@ var BootstrapTextFieldComponent = new Class.Registry({
     type : "text-field",
 
     render : function(){
-    	return BootstrapTextFieldComponent.TextSnippet.getText(
-    		KapibaraLocale.GetText(this.getName()), 
-    		this.getValue()
-    	);
+    	this.setHTML( BootstrapTextFieldComponent.TextSnippet.getText( KapibaraLocale.GetText(this.getName()) ) );
+        
+
+        return this.getHTML();
     }
 
 })

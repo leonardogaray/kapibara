@@ -13,28 +13,28 @@ R::freeze(true);
 // initialize app
 $app = new \Slim\Slim();
 
-// handle GET requests for /article
-$app->get('/articles', function () use ($app) {  
-  // query database for all article
-	$articles = R::find('article'); 
+// handle GET requests for /:entity
+$app->get('/:entityName', function ($entityName) use ($app) {  
+  // query database for all entity
+	$entities = R::find(rtrim($entityName,"s")); 
 
   // send response header for JSON content type
 	$app->response()->header('Content-Type', 'application/json');
 
   // return JSON-encoded response body with query results
-	echo json_encode(R::exportAll($articles));
+	echo json_encode(R::exportAll($entities));
 });
 
-// handle GET requests for /article/:id
-$app->get('/article/:id', function ($id) use ($app) {    
+// handle GET requests for /:entity/:id
+$app->get('/:entityName/:id', function ($entityName, $id) use ($app) {    
 	try {
-    // query database for single article
-		$article = R::findOne('article', 'id=?', array($id));
+    // query database for single entity
+		$entity = R::findOne($entityName, 'id=?', array($id));
 
-		if ($article) {
+		if ($entity) {
       // if found, return JSON response
 			$app->response()->header('Content-Type', 'application/json');
-			echo json_encode(R::exportAll($article));
+			echo json_encode(R::exportAll($entity));
 		} else {
       // else throw exception
 			throw new ResourceNotFoundException();
@@ -48,50 +48,57 @@ $app->get('/article/:id', function ($id) use ($app) {
 	}
 });
 
-// handle POST requests to /article
-$app->post('/article', function () use ($app) {    
+// handle POST requests to /entity
+$app->post('/entityName', function ($entityName) use ($app) {    
 	try {
     // get and decode JSON request body
 		$request = $app->request();
 		$body = $request->getBody();
 		$input = json_decode($body); 
 
-    // store article record
-		$article = R::dispense('article');
-		$article->title = (string)$input->title;
-		$article->url = (string)$input->url;
-		$article->date = (string)$input->date;
-		$id = R::store($article);    
+    // store entity record
+		$entity = R::dispense($entityName);
+
+		$attributes = get_object_vars ( $input );
+
+		foreach ($attributes as $key => $val) {
+			$entity->{$key} = (string)$input->{$key};
+		}
+		
+		$id = R::store($entity);    
 
     // return JSON-encoded response body
 		$app->response()->header('Content-Type', 'application/json');
-		echo json_encode(R::exportAll($article));
+		echo json_encode(R::exportAll($entity));
 	} catch (Exception $e) {
 		$app->response()->status(400);
 		$app->response()->header('X-Status-Reason', $e->getMessage());
 	}
 });
 
-// handle PUT requests to /article/:id
-$app->put('/article/:id', function ($id) use ($app) {    
+// handle PUT requests to /:entity/:id
+$app->put('/:entityName/:id', function ($entityName, $id) use ($app) {    
 	try {
     // get and decode JSON request body
 		$request = $app->request();
 		$body = $request->getBody();
 		$input = json_decode($body); 
 		
-    // query database for single article
-		$article = R::findOne('article', 'id=?', array($id));  
+    // query database for single entity
+		$entity = R::findOne($entityName, 'id=?', array($id));  
 		
-    // store modified article
+    // store modified entity
     // return JSON-encoded response body
-		if ($article) {      
-			$article->title = (string)$input->title;
-			$article->url = (string)$input->url;
-			$article->date = (string)$input->date;
-			R::store($article);    
+		if ($entity) {      
+			
+			$attributes = get_object_vars ( $input );
+			foreach ($attributes as $key => $val) {
+				$entity->{$key} = (string)$input->{$key};
+			}
+			
+			R::store($entity);    
 			$app->response()->header('Content-Type', 'application/json');
-			echo json_encode(R::exportAll($article));
+			echo json_encode(R::exportAll($entity));
 		} else {
 			throw new ResourceNotFoundException();    
 		}
@@ -103,16 +110,16 @@ $app->put('/article/:id', function ($id) use ($app) {
 	}
 });
 
-// handle DELETE requests to /article/:id
-$app->delete('/article/:id', function ($id) use ($app) {    
+// handle DELETE requests to /:entity/:id
+$app->delete('/:entityName/:id', function ($entityName, $id) use ($app) {    
 	try {
-    // query database for article
+    // query database for entity
 		$request = $app->request();
-		$article = R::findOne('article', 'id=?', array($id));  
+		$entity = R::findOne($entityName, 'id=?', array($id));  
 		
-    // delete article
-		if ($article) {
-			R::trash($article);
+    // delete entity
+		if ($entity) {
+			R::trash($entity);
 			$app->response()->status(204);
 		} else {
 			throw new ResourceNotFoundException();

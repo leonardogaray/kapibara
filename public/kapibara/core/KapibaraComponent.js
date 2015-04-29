@@ -59,7 +59,7 @@ var KapibaraComponent = new Class.Kapibara({
     },
 
     getRequestUrl : function(parameters){
-        return "../server/languages/php/5.3.8/core/Test.php/" + this.getId() + this.getRequestUrlParameters(parameters)
+        return "../server/languages/php/5.3.8/core/KapibaraRest.php/" + this.getId() + this.getRequestUrlParameters(parameters)
     },
 
     requestComponentData : function(parameters){
@@ -71,6 +71,16 @@ var KapibaraComponent = new Class.Kapibara({
                 self.setComponentValue(data);  
             }
         });
+    },
+
+    setData : function(data){
+        KapibaraCommons.Assert(data,"The data is not defined");
+
+        this.data = data;
+    },    
+
+    getData : function(){
+        return this.data;
     },
 
     cleanData : function(){

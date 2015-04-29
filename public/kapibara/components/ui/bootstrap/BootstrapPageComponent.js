@@ -22,7 +22,8 @@ var BootstrapPageComponent = new Class.Registry({
     			KapibaraLocale.GetText(component.name),
     			component.render()
     		);
-    	})
+    	});
+        
     	return html;
     }
 

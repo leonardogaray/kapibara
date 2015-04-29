@@ -31,10 +31,19 @@ var BootstrapTableComponent = new Class.Registry({
         return this.model;
     },
 
-    "getColumn" : function(columnStructure, index){
+    getComponentValue : function(){
+        return (this.getData().length) ? this.getData() : [];
     },
 
-    "getRows" : function(columnStructure, index){
+    setComponentValue : function(data){
+        this.setData(data);
+        this.getComponent();
+    },
+
+    getColumn : function(columnStructure, index){
+    },
+
+    getRows : function(columnStructure, index){
         var columns = "";
 
         this.getData().forEach(function(data, index){

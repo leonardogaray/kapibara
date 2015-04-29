@@ -7,7 +7,8 @@
 			"files" : [
 				"kapibara/components/ui/kapibara/KapibaraFormComponent.js",
 				"kapibara/components/ui/kapibara/KapibaraTableComponent.js",
-				"kapibara/components/ui/kapibara/KapibaraHtmlTextAreaFieldComponent.js",
+				"kapibara/components/ui/kapibara/KapibaraHTMLTextAreaFieldComponent.js",
+				"kapibara/components/ui/kapibara/KapibaraHTML.js",
 				"kapibara/components/htmleditor/HtmlEditorWidget.js",
 				"kapibara/components/maps/MapsWidget.js"
 			],
@@ -48,6 +49,9 @@
 				"kapibara/components/ui/bootstrap/BootstrapTextFieldComponent.js",
 				"kapibara/components/ui/bootstrap/BootstrapTableComponent.js",
 				"kapibara/components/ui/bootstrap/BootstrapImageComponent.js",
+				"kapibara/components/ui/bootstrap/BootstrapHeaderComponent.js",
+				"kapibara/components/ui/bootstrap/BootstrapMenuComponent.js",
+				"kapibara/components/ui/bootstrap/BootstrapDateFieldComponent.js",
 				"3rdparty/bootstrap/3.3.4/css/bootstrap.min.css",
 				"3rdparty/bootstrap/3.3.4/js/bootstrap.min.js"
 			],

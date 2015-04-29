@@ -167,6 +167,30 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "server/languages/php/5.3.8/core/KapibaraOdataUriParser.php",
+			"settings":
+			{
+				"buffer_size": 1572,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "server/languages/php/5.3.8/core/KapibaraOdata.php",
+			"settings":
+			{
+				"buffer_size": 1329,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "public/index.html",
+			"settings":
+			{
+				"buffer_size": 1403,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -252,57 +276,79 @@
 		"/C/personal-git/kapibara",
 		"/C/personal-git/kapibara/public",
 		"/C/personal-git/kapibara/public/3rdparty",
-		"/C/personal-git/kapibara/public/kapibara",
-		"/C/personal-git/kapibara/public/kapibara/components/htmleditor",
-		"/C/personal-git/kapibara/public/kapibara/components/htmleditor/tinymce",
-		"/C/personal-git/kapibara/public/kapibara/components/maps",
-		"/C/personal-git/kapibara/public/kapibara/components/maps/googlemaps",
-		"/C/personal-git/kapibara/public/kapibara/components/ui",
-		"/C/personal-git/kapibara/public/kapibara/components/ui/kapibara",
-		"/C/personal-git/kapibara/public/kapibara/components/ui/openui5",
 		"/C/personal-git/kapibara/server",
-		"/C/personal-git/kapibara/server/app/Blog/models",
-		"/C/personal-git/kapibara/server/app/Test/config",
+		"/C/personal-git/kapibara/server/app",
+		"/C/personal-git/kapibara/server/app/Blog",
+		"/C/personal-git/kapibara/server/app/Blog/modules",
+		"/C/personal-git/kapibara/server/app/Test",
 		"/C/personal-git/kapibara/server/app/Test/modules",
+		"/C/personal-git/kapibara/server/config",
 		"/C/personal-git/kapibara/server/languages",
 		"/C/personal-git/kapibara/server/languages/php",
-		"/C/personal-git/kapibara/server/languages/php/5.5.9",
-		"/C/personal-git/kapibara/server/languages/php/5.5.9/core",
-		"/C/personal-git/kapibara/server/languages/php/5.5.9/libs",
-		"/C/personal-git/kapibara/server/languages/php/5.5.9/libs/RedBean-4.2",
-		"/C/personal-git/kapibara/server/languages/php/5.5.9/libs/Slim-2.6.2"
+		"/C/personal-git/kapibara/server/languages/php/5.3.8",
+		"/C/personal-git/kapibara/server/languages/php/5.3.8/core"
 	],
 	"file_history":
 	[
+		"/C/personal-git/kapibara/public/kapibara/components/ui/bootstrap/BootstrapTextFieldComponent.js",
+		"/C/personal-git/kapibara/public/kapibara/components/ui/bootstrap/BootstrapPageComponent.js",
+		"/C/personal-git/kapibara/public/kapibara/components/ui/bootstrap/BootstrapTableComponent.js",
+		"/C/personal-git/kapibara/public/kapibara/core/KapibaraComponent.js",
+		"/C/personal-git/kapibara/public/kapibara/components/ui/openui5/OpenUI5TableComponent.js",
+		"/C/personal-git/kapibara/public/kapibara/components/ui/bootstrap/BootstrapMenuComponent.js",
+		"/C/personal-git/kapibara/public/kapibara/components/ui/bootstrap/BootstrapTextComponent.js",
+		"/C/personal-git/kapibara/public/kapibara/components/ui/bootstrap/BootstrapDateFieldComponent.js",
+		"/C/personal-git/kapibara/public/kapibara/components/ui/openui5/OpenUI5MenuComponent.js",
+		"/C/personal-git/kapibara/public/kapibara/components/ui/bootstrap/snippets/date-field.html",
+		"/C/personal-git/kapibara/public/kapibara/components/ui/bootstrap/snippets/text.html",
+		"/C/personal-git/kapibara/public/kapibara/components/ui/bootstrap/snippets/text-field.html",
+		"/C/personal-git/kapibara/server/config/packages.json",
+		"/C/personal-git/kapibara/server/app/Blog/modules/Main.Blog.json",
+		"/C/personal-git/kapibara/public/kapibara/components/ui/openui5/OpenUI5PageComponent.js",
+		"/C/personal-git/kapibara/public/kapibara/components/ui/bootstrap/BootstrapHeaderComponent.js",
+		"/C/personal-git/kapibara/public/kapibara/components/ui/bootstrap/snippets/menu/menu.html",
+		"/C/personal-git/kapibara/public/kapibara/components/ui/bootstrap/snippets/menu/item-menu.html",
+		"/C/personal-git/kapibara/public/kapibara/components/ui/bootstrap/snippets/header.html",
+		"/C/personal-git/kapibara/public/kapibara/components/ui/openui5/OpenUI5DateFieldComponent.js",
+		"/C/personal-git/kapibara/public/kapibara/components/ui/jquerymobile/JQueryMobileComponent.js",
+		"/C/personal-git/kapibara/public/kapibara/components/ui/kapibara/KapibaraFormComponent.js",
+		"/C/personal-git/kapibara/public/kapibara/core/KapibaraEventManager.js",
+		"/C/personal-git/kapibara/public/kapibara/components/ui/openui5/OpenUI5TextFieldComponent.js",
+		"/C/personal-git/kapibara/public/kapibara/components/ui/openui5/OpenUI5Component.js",
+		"/C/personal-git/kapibara/public/kapibara/components/ui/openui5/OpenUI5FormComponent.js",
+		"/C/personal-git/kapibara/public/kapibara/core/KapibaraModule.js",
+		"/C/personal-git/kapibara/public/kapibara/core/KapibaraComponentFactory.js",
+		"/C/personal-git/kapibara/public/kapibara/components/ui/kapibara/KapibaraHtmlTextAreaFieldComponent.js",
+		"/C/personal-git/kapibara/server/languages/php/5.3.8/core/Test.php",
+		"/C/personal-git/kapibara/public/kapibara/core/KapibaraRequest.js",
+		"/C/personal-git/kapibara/public/kapibara/core/Kapibara.js",
+		"/C/personal-git/kapibara/public/kapibara/components/ui/kapibara/KapibaraTableComponent.js",
+		"/C/personal-git/kapibara/public/kapibara/core/KapibaraModuleRepository.js",
+		"/C/personal-git/kapibara/public/index.html",
+		"/C/personal-git/kapibara/server/app/Blog/models/Article.Blog.json",
+		"/C/personal-git/kapibara/public/kapibara/core/KapibaraCommons.js",
+		"/C/personal-git/kapibara/server/app/Blog/models/User.Blog.json",
+		"/C/personal-git/kapibara/server/languages/php/5.3.8/KapibaraIntrepeter.php",
 		"/C/personal-git/kapibara/server/languages/php/5.5.9/core/Test.php",
 		"/C/personal-git/kapibara/server/languages/php/5.5.9/KapibaraIntrepeter.php",
 		"/C/personal-git/kapibara/server/languages/php/5.5.9/core/KapibaraModel.php",
 		"/C/Users/leogaray/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
-		"/C/personal-git/kapibara/public/index.html",
 		"/C/personal-git/kapibara/public/kapibara/components/maps/googlemaps/GoogleMapsWidget.js",
 		"/C/personal-git/kapibara/public/kapibara/components/htmleditor/tinymce/TinymceWidget.js",
 		"/C/personal-git/kapibara/public/kapibara/components/ui/openui5/OpenUI5HTMLTextAreaFieldComponent.js",
 		"/C/personal-git/kapibara/public/kapibara/components/ui/openui5/OpenUI5MapComponent.js",
-		"/C/personal-git/kapibara/public/kapibara/components/ui/kapibara/KapibaraHtmlTextAreaFieldComponent.js",
-		"/C/personal-git/kapibara/server/config/packages.json",
 		"/C/personal-git/kapibara/server/app/Test/config/package.json",
 		"/C/personal-git/kapibara/server/app/Test/modules/Main.Test.json",
-		"/C/personal-git/kapibara/public/kapibara/core/Kapibara.js",
 		"/C/personal-git/kapibara/server/app/Blog/config/package.json",
 		"/C/personal-git/kapibara/public/kapibara/components/htmleditor/HtmlEditorWidget.js",
 		"/C/personal-git/kapibara/public/kapibara/core/KapibaraWidgetFactory.js",
 		"/C/personal-git/kapibara/public/kapibara/components/maps/MapsWidget.js",
 		"/C/personal-git/kapibara/public/kapibara/core/KapibaraWidget.js",
-		"/C/personal-git/kapibara/public/kapibara/core/KapibaraModuleRepository.js",
-		"/C/personal-git/kapibara/server/app/Blog/modules/Main.Blog.json",
 		"/C/personal-git/kapibara/public/kapibara/components/ui/openui5/snippets/map.html",
 		"/C/personal-git/kapibara/public/kapibara/components/ui/openui5/snippets/html.textarea.html",
 		"/C/personal-git/kapibara/public/kapibara/components/ui/openui5/OpenUI5TextAreaFieldComponent.js",
 		"/C/personal-git/kapibara/public/kapibara/components/ui/openui5/OpenUI5FileFieldComponent.js",
-		"/C/personal-git/kapibara/public/kapibara/components/ui/openui5/OpenUI5PageComponent.js",
-		"/C/personal-git/kapibara/public/kapibara/core/KapibaraCommons.js",
 		"/C/personal-git/kapibara/public/kapibara/components/ui/openui5/OpenUI5HeaderComponent.js",
-		"/C/personal-git/kapibara/public/kapibara/components/ui/openui5/OpenUI5MenuComponent.js",
 		"/C/personal-git/kapibara/public/kapibara/components/ui/jqueryui/JQueryUIComponent.js",
 		"/C/personal-git/kapibara/public/kapibara/components/ui/jqueryui/snippets/page.html",
 		"/C/personal-git/kapibara/public/3rdparty/jqueryui-datatable/jquery-ui-datatable.css",
@@ -314,7 +360,6 @@
 		"/C/personal-git/kapibara/public/kapibara/components/ui/jqueryui/snippets/text-field.html",
 		"/C/personal-git/kapibara/public/kapibara/components/ui/jqueryui/snippets/table/table.html",
 		"/C/personal-git/kapibara/public/kapibara/components/ui/jqueryui/JQueryUIPageComponent.js",
-		"/C/personal-git/kapibara/public/kapibara/components/ui/jquerymobile/JQueryMobileComponent.js",
 		"/C/personal-git/kapibara/public/kapibara/components/ui/jqueryui/JQueryUIFormComponent.js",
 		"/C/personal-git/kapibara/public/kapibara/components/ui/jqueryui/JQueryUIImageComponent.js",
 		"/C/personal-git/kapibara/public/kapibara/components/ui/jqueryui/JQueryUITableComponent.js",
@@ -324,7 +369,6 @@
 		"/C/personal-git/kapibara/public/kapibara/components/ui/jquerymobile/JQueryMobilePageComponent.js",
 		"/C/personal-git/kapibara/public/kapibara/components/ui/jquerymobile/snippets/panel.html",
 		"/C/personal-git/kapibara/public/kapibara/components/ui/jquerymobile/snippets/page.html",
-		"/C/personal-git/kapibara/public/kapibara/components/ui/bootstrap/BootstrapTextFieldComponent.js",
 		"/C/personal-git/kapibara/public/kapibara/components/ui/jquerymobile/snippets/form/form.html",
 		"/C/personal-git/kapibara/server/app/Test/modules/Main2.Test.json",
 		"/C/personal-git/kapibara/public/kapibara/components/ui/jquerymobile/JQueryMobileImageComponent.js",
@@ -334,33 +378,20 @@
 		"/C/personal-git/kapibara/public/kapibara/components/ui/jquerymobile/JQueryMobileTableComponent.js",
 		"/C/personal-git/kapibara/public/kapibara/components/ui/jquerymobile/snippets/table/table.html",
 		"/C/personal-git/kapibara/public/kapibara/components/ui/jquerymobile/snippets/text-field.html",
-		"/C/personal-git/kapibara/public/kapibara/core/KapibaraComponent.js",
 		"/C/personal-git/kapibara/public/kapibara/components/ui/bootstrap/BootstrapImageComponent.js",
 		"/C/personal-git/kapibara/public/kapibara/components/ui/openui5/OpenUI5ImageComponent.js",
-		"/C/personal-git/kapibara/public/kapibara/components/ui/bootstrap/snippets/text.html",
 		"/C/personal-git/kapibara/public/kapibara/components/ui/bootstrap/snippets/image.html",
-		"/C/personal-git/kapibara/public/kapibara/components/ui/openui5/OpenUI5Component.js",
 		"/C/personal-git/kapibara/public/kapibara/components/ui/bootstrap/snippets/table/table.html",
-		"/C/personal-git/kapibara/public/kapibara/components/ui/bootstrap/BootstrapTableComponent.js",
 		"/C/personal-git/kapibara/public/kapibara/components/ui/bootstrap/BootstrapFormComponent.js",
-		"/C/personal-git/kapibara/public/kapibara/components/ui/openui5/OpenUI5TableComponent.js",
 		"/C/personal-git/kapibara/server/app/Test/services/table.test.json",
-		"/C/personal-git/kapibara/public/kapibara/components/ui/kapibara/KapibaraTableComponent.js",
 		"/C/personal-git/kapibara/public/kapibara/components/ui/bootstrap/snippets/table/table-row.html",
 		"/C/personal-git/kapibara/public/kapibara/components/ui/bootstrap/snippets/table/table-row-header.html",
 		"/C/personal-git/kapibara/public/kapibara/components/ui/bootstrap/snippets/table/table-row-col.html",
 		"/C/personal-git/kapibara/public/kapibara/components/ui/bootstrap/snippets/table/table-row-header-col.html",
 		"/C/personal-git/kapibara/public/kapibara/components/ui/bootstrap/snippets/table/table-header.html",
-		"/C/personal-git/kapibara/public/kapibara/components/ui/openui5/OpenUI5TextFieldComponent.js",
-		"/C/personal-git/kapibara/public/kapibara/components/ui/openui5/OpenUI5FormComponent.js",
-		"/C/personal-git/kapibara/public/kapibara/core/KapibaraComponentFactory.js",
-		"/C/personal-git/kapibara/public/kapibara/components/ui/bootstrap/BootstrapPageComponent.js",
-		"/C/personal-git/kapibara/public/kapibara/components/ui/bootstrap/BootstrapTextComponent.js",
-		"/C/personal-git/kapibara/public/kapibara/components/ui/bootstrap/snippets/text-field.html",
 		"/C/personal-git/kapibara/server/app/Test/i18n/i18n.en.properties",
 		"/C/personal-git/kapibara/public/kapibara/components/ui/bootstrap/snippets/form/form.html",
 		"/C/personal-git/kapibara/public/kapibara/components/ui/bootstrap/snippets/form/form-element.html",
-		"/C/personal-git/kapibara/public/kapibara/core/KapibaraModule.js",
 		"/C/personal-git/kapibara/public/kapibara/components/ui/bootstrap/BootstrapComponent.js",
 		"/C/personal-git/kapibara/public/kapibara/core/KapibaraSnippet.js",
 		"/C/personal-git/kapibara/public/kapibara/components/ui/bootstrap/snippets/page.html",
@@ -386,22 +417,7 @@
 		"/C/glooobal-git/git/interpolls/new/public2/libs/form-manager/Components/FileUploaderComponent.js",
 		"/C/glooobal-git/git/interpolls/new/public2/libs/form-manager/Components/ImageComponent.js",
 		"/C/glooobal-git/git/interpolls/new/public2/index.html",
-		"/C/glooobal-git/git/interpolls/new/public2/libs/form-manager/Component.js",
-		"/C/glooobal-git/git/interpolls/new/public2/launchpad/main.view.js",
-		"/C/glooobal-git/git/interpolls/new/public2/campaign-manager/Manifests/CampaignManagerManifest.js",
-		"/C/glooobal-git/git/interpolls/new/public2/libs/form-manager/LoadingIconManager.js",
-		"/C/glooobal-git/git/interpolls/new/public2/libs/form-manager/Components/DropdownComponent.js",
-		"/C/glooobal-git/git/interpolls/new/public2/libs/form-manager/Components/EntryFieldComponent.js",
-		"/C/glooobal-git/git/interpolls/new/public2/libs/list-gallery/code/ListGallery.all.js",
-		"/C/glooobal-git/git/interpolls/new/public2/libs/form-manager/Components/FormComponent.js",
-		"/C/glooobal-git/git/interpolls/new/public2/libs/form-manager/Components/ButtonComponent.js",
-		"/C/glooobal-git/git/interpolls/new/public2/libs/form-manager/Components/CheckboxComponent.js",
-		"/C/glooobal-git/git/interpolls/new/public2/libs/form-manager/Components/DateComponent.js",
-		"/C/glooobal-git/git/interpolls/new/public2/libs/form-manager/Components/ListBoxComponent.js",
-		"/C/glooobal-git/git/interpolls/new/public2/libs/form-manager/Components/PasswordFieldComponent.js",
-		"/C/glooobal-git/git/interpolls/new/public2/libs/form-manager/Components/ListGalleryComponent.js",
-		"/C/glooobal-git/git/interpolls/new/public2/libs/list-gallery/css/listGallery.css",
-		"/C/glooobal-git/git/interpolls/new/sentimentAnalysisService/start.sh"
+		"/C/glooobal-git/git/interpolls/new/public2/libs/form-manager/Component.js"
 	],
 	"find":
 	{
@@ -412,6 +428,7 @@
 		"height": 90.0,
 		"where_history":
 		[
+			"C:\\personal-git\\kapibara",
 			"C:\\personal-git\\kapibara\\public\\kapibara",
 			"C:\\personal-git\\kapibara\\public\\kapibara\\core",
 			"C:\\personal-git\\kapibara",
@@ -444,6 +461,29 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"expres",
+			"componentId",
+			"requestComponentData",
+			"clean",
+			"formComponents",
+			"getFormComponents",
+			"eventManager",
+			"getServerPath",
+			"Create",
+			"componentName",
+			"getMainModuleId",
+			"GetMainModuleId",
+			"GetMainModule",
+			"GetMainModuleId",
+			"getMainModuleId",
+			"getmode",
+			"model",
+			"json",
+			"def",
+			"requ",
+			"Request",
+			"articl",
+			"articles",
 			"KapibaraComponentFactory",
 			"fac",
 			"LoadModules",
@@ -548,30 +588,7 @@
 			"goToPage",
 			"turnOnMenuButton",
 			"turnOffAllMenuButton",
-			"getMenuButtons",
-			"_on",
-			"back",
-			"logo_large",
-			"gotopa",
-			"pageConfigurations",
-			"tileContainer",
-			"createTiles",
-			"headerParameters",
-			"uploadCSVAction",
-			"file-uploa",
-			"line-char",
-			"%",
-			"setname",
-			"diff",
-			"event",
-			"next",
-			"setComponentValue",
-			"onchange",
-			"_components",
-			"save",
-			"MEssage.Add",
-			"error loading data",
-			"GEOLOCATION_DOMAIN"
+			"getMenuButtons"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -579,6 +596,10 @@
 		"regex": false,
 		"replace_history":
 		[
+			"this.getComponentId()",
+			"article",
+			"articl",
+			"article",
 			"jqueryui",
 			"JQuery",
 			"JQueryUI",
@@ -679,8 +700,215 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "server/languages/php/5.3.8/core/KapibaraOdataUriParser.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1572,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								869,
+								869
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "server/languages/php/5.3.8/core/KapibaraOdata.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1329,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								664,
+								664
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"open_with_edit": true,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 164.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "public/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1403,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1259,
+								1259
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -801,11 +1029,11 @@
 	"settings":
 	{
 	},
-	"show_minimap": true,
+	"show_minimap": false,
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 376.0,
+	"side_bar_width": 307.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

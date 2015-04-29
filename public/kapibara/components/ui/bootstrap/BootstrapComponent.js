@@ -3,7 +3,9 @@ var BootstrapComponent = new Class.Kapibara({
 	
 	group : "bootstrap",
 
-	renderAt : function(target){
+	Implements : KapibaraHTML,
+
+	"renderAt" : function(target){
     	$(target)[0].appendHTML(this.render());
     }
 

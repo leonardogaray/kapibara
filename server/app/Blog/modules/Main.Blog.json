@@ -11,13 +11,12 @@
 			}
 		}		
 	},
-	"options" : {
-		"header" : {
+	"value" : [
+		{
 			"id" : "header",
 			"type" : "header",
 			"value" : "My First Blog"
-		},
-		"menu" : {
+		},{
 			"id" : "menu",
 			"type" : "menu",
 			"value" : [
@@ -29,10 +28,7 @@
 					"value" : "second"
 				}
 			]
-		}
-	},
-	"value" : [
-		{
+		},{
 			"id" : "article",
 			"type" : "form",
 			"value" : [

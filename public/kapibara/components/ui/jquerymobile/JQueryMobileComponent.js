@@ -7,7 +7,6 @@ var JQueryMobileComponent = new Class.Kapibara({
 		var self = this;
 		
 		setTimeout(function(){
-			debugger
 			$(target).replaceWith( self.render() );
 			$(target).enhanceWithin();
 		},2000)

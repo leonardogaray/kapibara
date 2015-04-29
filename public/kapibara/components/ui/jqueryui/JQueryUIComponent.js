@@ -5,7 +5,6 @@ var JQueryUIComponent = new Class.Kapibara({
 
 	renderAt : function(target){
 		$(target).html( this.render() );
-		$('#myTable').dataTable();
     }
 
 })
