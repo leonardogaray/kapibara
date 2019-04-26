@@ -1,0 +1,9 @@
+{
+	"version" : "0.0.1",
+	"name": "logistic",
+	"app" : {
+		"frontend": "angular-7_2",
+		"application": "spring-5.0",
+		"database": "mariadb-10.3"
+	}
+}

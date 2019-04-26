@@ -1,0 +1,19 @@
+{
+	"id" : {
+		"name" : "truck",
+		"dbName" : "truck"
+	},
+	"entity": [
+		{
+			"name": "name",
+			"dbName": "name",
+			"type": "string",
+			"required": "true" 
+		},{
+			"name": "model",
+			"dbName": "model",
+			"type": "string",
+			"required": "true" 
+		}
+	]
+}

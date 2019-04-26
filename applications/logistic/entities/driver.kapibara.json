@@ -1,0 +1,19 @@
+{
+	"id" : {
+		"name" : "driver",
+		"dbName" : "driver"
+	},
+	"entity": [
+		{
+			"name": "id",
+			"dbName": "id",
+			"type": "uuid",
+			"required": "true" 
+		},{
+			"name": "name",
+			"dbName": "name",
+			"type": "string",
+			"required": "true" 
+		}
+	]
+}

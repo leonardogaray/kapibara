@@ -1,0 +1,30 @@
+{
+	"id" : {
+		"name" : "route",
+		"dbName" : "route"
+	},
+	"entity": [
+		{
+			"name": "id",
+			"dbName": "id",
+			"type": "uuid",
+			"required": "true" 
+		},{
+			"name": "start",
+			"dbName": "start",
+			"type": "date",
+			"required": "true" 
+		},{
+			"name": "end",
+			"dbName": "end",
+			"type": "date",
+			"required": "true" 
+		},{
+			"name": "stops",
+			"type": "stop"
+		},{
+			"name": "notes",
+			"type": "note"
+		}
+	]
+}

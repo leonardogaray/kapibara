@@ -1,0 +1,24 @@
+{
+	"id" : {
+		"name" : "stop",
+		"dbName" : "stop"
+	},
+	"entity": [
+		{
+			"name": "id",
+			"dbName": "id",
+			"type": "uuid",
+			"required": "true" 
+		},{
+			"name": "name",
+			"dbName": "name",
+			"type": "string",
+			"required": "true" 
+		},{
+			"name": "gps",
+			"dbName": "gps",
+			"type": "string",
+			"required": "true" 
+		}
+	]
+}
