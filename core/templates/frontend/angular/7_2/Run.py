@@ -1,13 +1,52 @@
 import os
+import distutils.dir_util
+import glob
+import re
+from jinja2 import Environment, FileSystemLoader
 
 class Run():
-    def execute(self, appName, path):
-        path = path + "/build"
+    def __init__(self, appName, templatePath, appPath):
+        self.appName = appName
+        self.templatePath = templatePath
+        self.appPath = appPath
+        self.preBuildPath =  "{0}/.preBuild".format(self.templatePath)
+        self.buildPath =  "{0}/build".format(self.templatePath)
+
+    def execute(self):
         #If build folder does not exist, create it
-        if not os.path.exists(path):
-            os.makedirs(path)
-        os.chdir(path)
-        if (not os.path.exists(path + "/" + appName)) or (os.path.exists(path + "/" + appName) and not os.path.isfile(path + "/" + appName + "/package.json")):
-            os.system("ng new " + appName)
-        else:
-            print("Angular already exists!")
+        if not os.path.exists(self.preBuildPath):
+            os.makedirs(self.preBuildPath)
+
+        #if (not os.path.exists("{0}/{1}".format(self.preBuildPath, self.appName))
+        #    or (os.path.exists("{0}/{1}".format(self.preBuildPath, self.appName))
+        #    and not os.path.isfile("{0}/{1}/package.json".format(self.preBuildPath, self.appName)))):
+        sourcePath = "{0}/templates/frontend/angular/7_2/skeleton".format(self.appPath)
+        destinationPath = "{0}/logistic".format(self.preBuildPath)
+        distutils.dir_util.copy_tree(sourcePath, destinationPath)
+
+        self.render(destinationPath)
+
+        os.chdir("{0}/{1}".format(self.buildPath, self.appName))
+        os.system("npm install")
+        #else:
+        #    print("Angular already exists!")
+
+    def render(self, destinationPath):
+        #files = [f for f in os.walk(destinationPath)]
+        for root, dirs, files in [f for f in os.walk(destinationPath)]:
+            for fileName in files:
+                f = root + "/" + fileName
+                if not f.endswith((".ico",".jpg",".jpeg",".png")) :
+                    env = Environment(
+                        loader=FileSystemLoader(destinationPath),
+                        trim_blocks=True,
+                        variable_start_string='_%%',
+                        variable_end_string='%%_')
+                    template = env.get_template(f.replace(destinationPath,""))
+                    output_from_parsed_template = template.render(appName=self.appName)
+
+                    renderedFile = f.replace("/.preBuild/","/build/")
+                    os.makedirs(os.path.dirname(renderedFile), exist_ok=True)
+
+                with open(renderedFile, "w") as fh:
+                    fh.write(output_from_parsed_template)
