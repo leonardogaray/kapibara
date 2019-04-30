@@ -20,20 +20,26 @@ class Run():
         #if (not os.path.exists("{0}/{1}".format(self.preBuildPath, self.appName))
         #    or (os.path.exists("{0}/{1}".format(self.preBuildPath, self.appName))
         #    and not os.path.isfile("{0}/{1}/package.json".format(self.preBuildPath, self.appName)))):
-        sourcePath = "{0}/templates/frontend/angular/7_2/skeleton".format(self.appPath)
-        destinationPath = "{0}/{1}".format(self.preBuildPath, "frontend")
+        sourcePath = "{0}/templates/application/spring/5_0/skeleton".format(self.appPath)
+        destinationPath = "{0}/{1}".format(self.preBuildPath, "application")
+        # Copy the full tree structure
         distutils.dir_util.copy_tree(sourcePath, destinationPath)
 
         self.render(destinationPath)
 
-        os.chdir("{0}/{1}".format(self.buildPath, "frontend"))
-        #os.system("npm install")
+        os.chdir("{0}/{1}".format(self.buildPath, "application"))
+        os.system("gradle build && java -jar build/libs/{0}-0.1.0.jar".format(self.appName))
         #else:
         #    print("Angular already exists!")
 
     def render(self, destinationPath):
-        #files = [f for f in os.walk(destinationPath)]
         for root, dirs, files in [f for f in os.walk(destinationPath)]:
+            for dirName in dirs:
+                if(dirName.endswith("__appPackageName__")):
+                    directory = root + "/" + dirName
+                    newDirectory = root + "/" + dirName.replace("__appPackageName__", self.appName)
+                    os.rename(directory, newDirectory)
+
             for fileName in files:
                 f = root + "/" + fileName
                 if not f.endswith((".ico",".jpg",".jpeg",".png")) :
@@ -46,10 +52,10 @@ class Run():
                         variable_end_string='%%_',
                         comment_start_string='<%%#',
                         comment_end_string='#%%>')
-                    template = env.get_template(f.replace(destinationPath,""))
+                    template = env.get_template(f.replace(destinationPath,"").replace("__appPackageName__", self.appName))
                     output_from_parsed_template = template.render(appName=self.appName)
 
-                    renderedFile = f.replace("/.preBuild/","/build/")
+                    renderedFile = f.replace("/.preBuild/","/build/").replace("__appPackageName__", self.appName)
                     os.makedirs(os.path.dirname(renderedFile), exist_ok=True)
 
                 with open(renderedFile, "w") as fh:
