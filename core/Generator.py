@@ -31,17 +31,20 @@ class Generator:
 		distutils.dir_util.remove_tree("../applications/{0}/build".format(self.manifestFile["name"]))
 
 	def generateFrontend(self, frontend):
+		print("Generating Frontend .... ")
 		folder = "templates.frontend.{0}.{1}.Run".format(frontend.split("-")[0], frontend.split("-")[1])
 		Run = importlib.import_module(folder, package=None)
 		run = Run.Run(self.manifestFile["name"], self.args["--path"], Path(__file__).resolve().parent)
 		run.execute()
 
 	def generateApplication(self, application):
+		print("Generating Application .... ")
 		folder = "templates.application.{0}.{1}.Run".format(application.split("-")[0], application.split("-")[1])
 		Run = importlib.import_module(folder, package=None)
-		run = Run.Run(self.manifestFile["name"], self.args["--path"], Path(__file__).resolve().parent)
+		run = Run.Run(self.manifestFile["name"], self.manifestFile["version"], self.args["--path"], Path(__file__).resolve().parent)
 		run.execute()
 
+	# Split arguments from command line starting with "--"
 	def splitArguments(self):
 		for value in self.arguments[1:]:
 			if(value.startswith("--")):

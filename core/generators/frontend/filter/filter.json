@@ -1,0 +1,7 @@
+{
+  "fields": [
+    <%% for field in fields %%>
+      _%%field%%_,
+    <%% endfor %%>
+  ]
+}

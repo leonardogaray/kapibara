@@ -5,8 +5,9 @@ import re
 from jinja2 import Environment, FileSystemLoader
 
 class Run():
-    def __init__(self, appName, templatePath, appPath):
+    def __init__(self, appName, appVersion, templatePath, appPath):
         self.appName = appName
+        self.appVersion = appVersion
         self.templatePath = templatePath
         self.appPath = appPath
         self.preBuildPath =  "{0}/.preBuild".format(self.templatePath)
@@ -27,7 +28,7 @@ class Run():
         self.render(destinationPath)
 
         os.chdir("{0}/{1}".format(self.buildPath, "frontend"))
-        #os.system("npm install")
+        os.system("npm install")
         #else:
         #    print("Angular already exists!")
 

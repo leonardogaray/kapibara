@@ -4,6 +4,6 @@
 	"app" : {
 		"frontend": "angular-7_2",
 		"application": "spring-5_0",
-		"database": "mariadb-10.3"
+		"database": "mariadb-10_3"
 	}
 }

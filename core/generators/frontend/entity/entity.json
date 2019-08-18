@@ -1,0 +1,8 @@
+{
+  "title": "_%%name%%_",
+  "fields": [
+  <%% for field in fields %%>
+    _%%field%%_,
+  <%% endfor %%>
+  ]
+}

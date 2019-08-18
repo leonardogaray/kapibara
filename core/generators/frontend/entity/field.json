@@ -1,0 +1,5 @@
+{
+  "name": "_%%id%%_",
+  "type": "_%%type%%_",
+  "required": "_%%required%%_"
+}
